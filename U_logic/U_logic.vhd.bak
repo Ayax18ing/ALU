@@ -1,0 +1,31 @@
+entity U_logic is
+	port
+	(
+		-- Input ports
+		A,B	: in  std_logic_vector (3 downto 0);  --dos números de entrada
+		S     : in  std_logic_vector (1 downto 0);  --selector de operaciones
+		-- Output ports
+		SOUT	: out std_logic_vector (4 downto 0)   --resultado de las operaciones 
+	);
+end U_logic;
+
+
+architecture arch_U_logic of U_logic is
+
+	signal SULI:std_logic_vector(4 downto 0);
+
+begin
+
+	process (A, B, S) is 
+		if S='00' then
+			SOUT <= not A;
+		elsif S='01' then
+			SOUT <= not B;
+		elsif S='10' then
+			SOUT <= A or (not B);
+		elsif S='11' then
+			SOUT <= A and B;
+		end if;
+	end process;
+
+end arch_U_logic;

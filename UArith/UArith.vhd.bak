@@ -1,0 +1,106 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity UArith is
+	
+	port
+	(-- Input ports
+		A, B     : in integer range 0 to 15;        --dos numeros de 4 bits representados en enteros del 0 al 15
+		SIGA,SIGB: in std_logic;                    --signo de los números A y B
+		S        : in std_logic_vector (1 downto 0);--selector de la operación a realizar 
+		-- Output ports
+		S_Out    : buffer integer range 0 to 31;    --resultado de las operaciones
+	   S_OutAB  :out std_logic);                   --signo de salida
+end UArith;
+
+architecture arch_UArith of UArith is
+
+	
+begin
+	
+	PArith : process 	(A, B, S) IS                 --proceso donde se realizan las operaciones aritmeticas 
+	begin
+		if S = "00" then                            --operación s="00"
+			if SIGA = '0' then                         --si el signo de A es positivo o negativo
+				S_Out <= -1*A + 3;	                 --si SIGA="0", realiza la operacion como numero positivo
+					if S_Out>=0 then                   	--si el resultado de la operacion es positivo, la variable que determina el signo se establece en 0
+						S_OutAB<='0';
+					else                               	--sino la variable del signo se establece en 1 y se multiplica el resultado *-1 
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			else                                     --si SIGA="1", realiza la operacion como numero negativo
+				S_Out <= A + 3;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			end if;
+			
+		elsif S = "01" then
+			if SIGA = '0' then
+				S_Out <= -1*A + 3;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			else
+				S_Out <= A + 3;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			end if;
+			
+		elsif S = "10" then
+			if SIGB='0' then
+				S_Out <= -1*B - 4;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			else
+				S_Out <= B - 4;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			end if;
+			
+		elsif S ="11" then
+			if SIGB='0' then
+				S_Out <= -1*B - 3;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			else
+				S_Out <= B - 3;
+					if S_Out>=0 then
+						S_OutAB<='0';
+					else
+						S_OutAB<='1';
+						S_Out <= -1*S_Out;
+					end if;
+			end if;
+		end if;
+	end process;
+end arch_UArith;
+
+
+	

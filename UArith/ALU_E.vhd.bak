@@ -1,0 +1,121 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+-- Definición de la entidad ALU_E
+entity ALU_E is
+    port (
+        -- Puertos de entrada
+        Ai, Bi : in std_logic_vector (3 downto 0);  -- Números a operar
+        SA, SB : in std_logic;                      -- Signos de los números
+        S      : in std_logic_vector (2 downto 0);  -- Selector de operación
+
+        -- Puertos de salida
+        DIS_p  : out std_logic_vector (16 downto 0);  -- Números y signo en 3 displays
+        SI_G   : out std_logic                         -- Signo a mostrar en display
+    );
+end ALU_E;
+
+architecture arch_ALU_E of ALU_E is
+	
+	-- Declaración del componente UArith
+	component UArith
+        port (
+            A, B     : in std_logic_vector (3 downto 0);  -- Números de entrada
+            SIGA,SIGB: in std_logic;                      -- Signos de los números
+            S        : in std_logic_vector (1 downto 0);  -- Selector de operaciones
+            S_Out    : out std_logic_vector (4 downto 0); -- Resultado de las operaciones
+            S_OutAB  : out std_logic                      -- Signo de salida
+        );
+    end component;
+
+	-- Declaración del componente U_logic
+	Component U_logic 
+	port
+	( -- Puertos de entrada
+		A,B	: in  std_logic_vector (3 downto 0);    -- Dos números de entrada
+		S     : in  std_logic_vector (1 downto 0);    -- Selector de operaciones
+		-- Puertos de salida
+		SOUT	: out std_logic_vector (4 downto 0));   -- Resultado de las operaciones
+	end Component;
+	
+	-- Declaración del componente Conversor
+	Component Conversor
+	port
+	(-- Puertos de entrada
+		Sum_Con : in  std_logic_vector (4 downto 0);  -- Número de 4 bits
+		-- Puertos de salida
+		Dec     : out std_logic_vector (3 downto 0);  -- Decenas del número ingresado
+		Uni     : out std_logic_vector (3 downto 0)); -- Unidades del número ingresado
+	end Component;
+	
+	-- Declaración del componente BCD7Seg
+	Component BCD7Seg
+	port
+	(-- Puertos de entrada
+		IA,IB, IC, ID : in STD_LOGIC;
+		-- Puertos de salida
+		F : out std_logic_vector (6 downto 0));
+	end Component;
+
+	-- Procedimiento para configurar el componente UArith
+--	procedure Configure_UArith is
+	--	begin
+     --   UArith_inst : UArith port map (
+       --         A => Ai,
+         --       B => Bi,
+           --     SIGA => SA,
+             --   SIGB => SB,
+               -- S => S(0 downto 1),
+  --              S_Out => Result_Out,
+    --            S_OutAB => Sign_Out
+      --      );
+   --end procedure;
+	
+	-- Procedimiento para configurar el componente U_logic
+--	procedure Configure_U_logic is
+  --  begin
+    --    U_logic_inst : U_logic
+      --      port map (
+        --        A => Ai,
+          --      B => Bi,
+            --    S => S(0 downto 1),
+              --  SOUT => ump
+           -- );
+ --  end procedure;
+	
+	-- Declaración de señales
+	signal A1, B1 : std_logic_vector(4 downto 0);   -- Magnitud de los números A y B
+	signal Si     : std_logic_vector(1 downto 0);   -- Selector de las operaciones en cada componente
+	signal S1     : std_logic;                      -- Selector aritmético o lógico
+	signal ump    : std_logic_vector(4 downto 0);   -- Señal para el resultado del componente lógico
+	signal ump2   : std_logic_vector(4 downto 0);   -- Señal para el resultado del componente aritmético
+	signal SS     : std_logic;                      -- Signo del resultado componente aritmético
+	signal Result_Out : std_logic_vector(4 downto 0); -- Resultado de las operaciones
+    signal Sign_Out   : std_logic;                   -- Signo de salida
+	
+begin
+	-- Concatenación de los bits de selección
+	Si <= S(0) & S(1);
+	S1 <= S(2);	
+	
+	-- Proceso para seleccionar y configurar los componentes según la operación
+	--process (Ai, Bi, SA, SB, Si, S1) is
+--	begin
+	--	if S1 = '0' then  -- Operaciones lógicas
+     --       Configure_U_logic;  -- Configuración del componente U_logic
+       --     ump <= result;  -- Asignación del resultado al puerto de salida
+--		else  -- Operaciones aritméticas
+  --          Configure_UArith;  -- Configuración del componente UArith
+    --        ump2 <= result;  -- Asignación del resultado al puerto de salida
+      --      SS <= SS_tmp;  	 -- Asignación del signo al puerto de salida
+--		end if;
+	--end process;
+	
+	-- Asignación de resultados a los puertos de salida
+--	DIS_p <= Result_Out & Sign_Out & (others => '0');
+ --   SI_G <= Sign_Out;
+
+end arch_ALU_E;
