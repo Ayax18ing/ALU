@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Samuel/Desktop/Lab-Quartus/Semaforo_VHDL/Back_sensor/Back_sensor.vhd
+source_file = 1, C:/Users/Samuel/Desktop/Lab-Quartus/Semaforo_VHDL/Back_sensor/db/Back_sensor.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = Back_sensor
+instance = comp, \StopTime~output\, StopTime~output, Back_sensor, 1
+instance = comp, \ResetTime~output\, ResetTime~output, Back_sensor, 1
+instance = comp, \Senssal~input\, Senssal~input, Back_sensor, 1

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Front_sensor\simulation\qsim
+vFront_sensor
+Z1 !s100 iGM_^S59TDg`Y@V>FV8Y=0
+Z2 I4b>LjF<jiP<:O3YeXWRa00
+Z3 Vkkh]T>@E6Ag[::OD5[F@c3
+Z4 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Front_sensor\simulation\qsim
+Z5 w1710868051
+Z6 8Front_sensor.vo
+Z7 FFront_sensor.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Front_sensor.vo|
+Z10 o-work work -O0
+Z11 n@front_sensor
+!i10b 1
+!s85 0
+Z12 !s108 1710868051.906000
+Z13 !s107 Front_sensor.vo|
+!s101 -O0
+vFront_sensor_vlg_check_tst
+!i10b 1
+Z14 !s100 f;mJD4SNaBaHM[`?BC2l62
+Z15 IVEc<XdRmXmQA]8mG00lN>1
+Z16 VKcPR5JEDAmS9X?<Ih?PB11
+R4
+Z17 w1710868049
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1710868051.964000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@front_sensor_vlg_check_tst
+vFront_sensor_vlg_sample_tst
+!i10b 1
+Z24 !s100 l:i=FdhR1dDYkHL?ceCGb3
+Z25 I8b2K0^>lg>j]EFGfQ5Ic:1
+Z26 VSkcC<9Z3o_N^Z1kf`U5c]2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@front_sensor_vlg_sample_tst
+vFront_sensor_vlg_vec_tst
+!i10b 1
+!s100 O]PZAHzXOL^lOTQC_Mbz=1
+IQEPfShiO2XZB_9LLiV@f?1
+Z28 V2aebAhIKNanYlL0Rk`HBS2
+R4
+R17
+R18
+R19
+Z29 L0 337
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@front_sensor_vlg_vec_tst

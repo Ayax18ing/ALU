@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Sem_fin\simulation\qsim
+vSem_fin
+Z1 !s100 Vj?B@ZZLMG1[U6h7`1oFN0
+Z2 IFbXeRgbbHn<YeEZ?Cm0GI0
+Z3 VT<T?MQ3bKE5KK>IY2S;Hm1
+Z4 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Sem_fin\simulation\qsim
+Z5 w1710540291
+Z6 8Sem_fin.vo
+Z7 FSem_fin.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Sem_fin.vo|
+Z10 o-work work -O0
+Z11 n@sem_fin
+!i10b 1
+!s85 0
+Z12 !s108 1710540291.616000
+Z13 !s107 Sem_fin.vo|
+!s101 -O0
+vSem_fin_vlg_check_tst
+!i10b 1
+Z14 !s100 `ZL6_5=HLQbW?h5zKiJM@0
+Z15 ImNcOJa_;0RhY_mN8Y^UDR2
+Z16 V_G9VbAJ[E5eWloh1ZBKDG2
+R4
+Z17 w1710540290
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1710540291.671000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@sem_fin_vlg_check_tst
+vSem_fin_vlg_sample_tst
+!i10b 1
+Z24 !s100 jL;_UQKS9HF<4<]ZY<C]^3
+Z25 IDKj>nT^IP1;RC6BXbz`@g0
+Z26 V44^:JWzKi=9C>7ofA2LTT2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@sem_fin_vlg_sample_tst
+vSem_fin_vlg_vec_tst
+!i10b 1
+!s100 e@C0cMi>A[YQLFH7eQl7J2
+I>SgUKz7g`I3iXLYDeA?]H0
+Z28 VGGk_;:3TWI[I7iXYjg`OE2
+R4
+R17
+R18
+R19
+Z29 L0 212
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@sem_fin_vlg_vec_tst

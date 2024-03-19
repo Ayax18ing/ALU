@@ -1,0 +1,13 @@
+|Back_sensor
+PresenceSensor => Pul_time.DATAA
+PresenceSensor => cnt.OUTPUTSELECT
+PresenceSensor => cnt.OUTPUTSELECT
+PresenceSensor => Pul_reset.DATAA
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => Pul_time.CLK
+CLK => Pul_reset.CLK
+Reset << Pul_reset.DB_MAX_OUTPUT_PORT_TYPE
+StopTime << Pul_time.DB_MAX_OUTPUT_PORT_TYPE
+
+

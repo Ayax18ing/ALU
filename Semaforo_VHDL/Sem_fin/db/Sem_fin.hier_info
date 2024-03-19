@@ -1,0 +1,14 @@
+|Sem_fin
+clk1 => rojo$latch.DATAIN
+clk2 => verde.DATAB
+limite[0] => LessThan0.IN6
+limite[1] => LessThan0.IN5
+limite[2] => LessThan0.IN4
+enable => Reloj.IN1
+enable => verde.IN1
+enable => rojo$latch.LATCH_ENABLE
+verde << verde$latch.DB_MAX_OUTPUT_PORT_TYPE
+rojo << rojo$latch.DB_MAX_OUTPUT_PORT_TYPE
+talfin << talfin$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

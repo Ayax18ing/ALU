@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Peaje">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Peaje|Conversor:Conversor_tiempo|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_7gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Peaje|Conversor:Conversor_tiempo|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_b8m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Peaje|Conversor:Conversor_vehiculos|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_7gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Peaje|Conversor:Conversor_vehiculos|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_b8m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

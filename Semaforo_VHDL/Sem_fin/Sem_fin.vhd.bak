@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity SemFin is
+    port (
+        clk1 : in std_logic;
+		  clk2 : in std_logic;											      			-- Señales de reloj
+        limite : in integer range 0 to 99;											-- Límite de segundos (Salida contador de tiempo)
+        enable : in std_logic;															-- Entrada habilitadora
+        verde, rojo, talfin : buffer std_logic										-- Salidas
+    );
+end entity SemFin;
+
+architecture arch_SemFin of SemFin is
+
+	 
+begin
+    Reloj: process(clk1, clk2, enable) is
+	 begin
+		if (enable='1') then
+			verde <= clk2;
+			rojo <= '0';
+			talfin <= '1';
+		elsif (enable='0') then
+			verde <= '0';
+			rojo <= clk1;
+			talfin <= '0';
+		end if;
+    end process;
+end architecture arch_SemFin;

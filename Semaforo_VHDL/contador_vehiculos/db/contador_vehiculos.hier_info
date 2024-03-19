@@ -1,0 +1,11 @@
+|contador_vehiculos
+CLK => ~NO_FANOUT~
+count[0] <= <GND>
+count[1] <= <GND>
+count[2] <= <GND>
+count[3] <= <GND>
+count[4] <= <GND>
+count[5] <= <GND>
+min <= <GND>
+
+

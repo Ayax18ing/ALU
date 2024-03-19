@@ -1,0 +1,30 @@
+|Front_sensor
+Reset => \Detector:deten_pro.IN1
+Reset => \Detector:var_alarma.ACLR
+Reset => enable.ACLR
+Reset => cerrado.PRESET
+Button => \Detector:var_alarma.IN1
+Button => \Detector:deten_pro.IN0
+b[0] => Equal0.IN0
+b[1] => Equal0.IN1
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+b[4] => ~NO_FANOUT~
+Sens => \Detector:var_alarma.IN1
+Sens => \Detector:deten_pro.IN1
+Sens => cont_vehiculo.DATAIN
+Sens => cerrado.CLK
+Sens => enable.CLK
+Sens => cerrado.ENA
+Sens => enable.ENA
+alarma << \Detector:var_alarma.DB_MAX_OUTPUT_PORT_TYPE
+cont_vehiculo << Sens.DB_MAX_OUTPUT_PORT_TYPE
+EN_salida << enable.DB_MAX_OUTPUT_PORT_TYPE
+Senal_cerrado << cerrado.DB_MAX_OUTPUT_PORT_TYPE
+dinero[0] << <GND>
+dinero[1] << <GND>
+dinero[2] << <GND>
+dinero[3] << <GND>
+dinero[4] << <GND>
+
+

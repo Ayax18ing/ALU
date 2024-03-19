@@ -1,0 +1,894 @@
+TimeQuest Timing Analyzer report for Sem_ini
+Mon Mar 18 12:49:13 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Recovery: 'BtnIn'
+ 13. Slow 1200mV 85C Model Removal: 'BtnIn'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'BtnIn'
+ 15. Slow 1200mV 85C Model Minimum Pulse Width: 'ResetEnable'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Slow 1200mV 85C Model Metastability Report
+ 21. Slow 1200mV 0C Model Fmax Summary
+ 22. Slow 1200mV 0C Model Setup Summary
+ 23. Slow 1200mV 0C Model Hold Summary
+ 24. Slow 1200mV 0C Model Recovery Summary
+ 25. Slow 1200mV 0C Model Removal Summary
+ 26. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 27. Slow 1200mV 0C Model Recovery: 'BtnIn'
+ 28. Slow 1200mV 0C Model Removal: 'BtnIn'
+ 29. Slow 1200mV 0C Model Minimum Pulse Width: 'BtnIn'
+ 30. Slow 1200mV 0C Model Minimum Pulse Width: 'ResetEnable'
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Slow 1200mV 0C Model Metastability Report
+ 36. Fast 1200mV 0C Model Setup Summary
+ 37. Fast 1200mV 0C Model Hold Summary
+ 38. Fast 1200mV 0C Model Recovery Summary
+ 39. Fast 1200mV 0C Model Removal Summary
+ 40. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 41. Fast 1200mV 0C Model Recovery: 'BtnIn'
+ 42. Fast 1200mV 0C Model Removal: 'BtnIn'
+ 43. Fast 1200mV 0C Model Minimum Pulse Width: 'BtnIn'
+ 44. Fast 1200mV 0C Model Minimum Pulse Width: 'ResetEnable'
+ 45. Setup Times
+ 46. Hold Times
+ 47. Clock to Output Times
+ 48. Minimum Clock to Output Times
+ 49. Fast 1200mV 0C Model Metastability Report
+ 50. Multicorner Timing Analysis Summary
+ 51. Setup Times
+ 52. Hold Times
+ 53. Clock to Output Times
+ 54. Minimum Clock to Output Times
+ 55. Board Trace Model Assignments
+ 56. Input Transition Times
+ 57. Slow Corner Signal Integrity Metrics
+ 58. Fast Corner Signal Integrity Metrics
+ 59. Recovery Transfers
+ 60. Removal Transfers
+ 61. Report TCCS
+ 62. Report RSKM
+ 63. Unconstrained Paths
+ 64. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; Sem_ini                                            ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ; < 0.1%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; BtnIn       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { BtnIn }       ;
+; ResetEnable ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ResetEnable } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; BtnIn ; 0.207 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; BtnIn ; 0.031 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------------+--------+----------------------------+
+; Clock       ; Slack  ; End Point TNS              ;
++-------------+--------+----------------------------+
+; BtnIn       ; -3.000 ; -5.000                     ;
+; ResetEnable ; -3.000 ; -3.000                     ;
++-------------+--------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'BtnIn'                                                                     ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.207 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.500        ; 2.494      ; 2.772      ;
+; 0.207 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.500        ; 2.494      ; 2.772      ;
+; 0.559 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 1.000        ; 2.494      ; 2.920      ;
+; 0.559 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 1.000        ; 2.494      ; 2.920      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'BtnIn'                                                                      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.031 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.000        ; 2.578      ; 2.796      ;
+; 0.031 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.000        ; 2.578      ; 2.796      ;
+; 0.375 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; -0.500       ; 2.578      ; 2.640      ;
+; 0.375 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; -0.500       ; 2.578      ; 2.640      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'BtnIn'                                                           ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; BtnIn ; Rise       ; BtnIn                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; Button                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.138  ; 0.354        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; Button                      ;
+; 0.138  ; 0.354        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|o               ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.459  ; 0.643        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; Button                      ;
+; 0.459  ; 0.643        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|o               ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'ResetEnable'                                                   ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target              ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; ResetEnable ; Rise       ; ResetEnable         ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|o ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; Paso|datad          ;
+; 0.362  ; 0.362        ; 0.000          ; High Pulse Width ; ResetEnable ; Fall       ; Paso                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.635  ; 0.635        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Fall       ; Paso                ;
+; 0.655  ; 0.655        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; Paso|datad          ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|o ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; SensSemIni ; ResetEnable ; 2.614 ; 3.034 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++------------+-------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+-------------+--------+--------+------------+-----------------+
+; SensSemIni ; ResetEnable ; -1.864 ; -2.257 ; Fall       ; ResetEnable     ;
++------------+-------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 5.396 ; 5.430 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 5.877 ; 5.863 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 5.863 ; 5.877 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 5.982 ; 6.026 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 4.704 ; 4.702 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 4.702 ; 4.704 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 4.821 ; 4.853 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 5.298 ; 5.329 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 5.752 ; 5.741 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 5.741 ; 5.752 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 5.860 ; 5.901 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 4.633 ; 4.633 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 4.633 ; 4.633 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 4.752 ; 4.782 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; BtnIn ; 0.198 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; BtnIn ; 0.034 ; 0.000                ;
++-------+-------+----------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------+--------+---------------------------+
+; Clock       ; Slack  ; End Point TNS             ;
++-------------+--------+---------------------------+
+; BtnIn       ; -3.000 ; -5.000                    ;
+; ResetEnable ; -3.000 ; -3.000                    ;
++-------------+--------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'BtnIn'                                                                      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.198 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.500        ; 2.313      ; 2.600      ;
+; 0.198 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.500        ; 2.313      ; 2.600      ;
+; 0.596 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 1.000        ; 2.313      ; 2.702      ;
+; 0.596 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 1.000        ; 2.313      ; 2.702      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'BtnIn'                                                                       ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.034 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.000        ; 2.386      ; 2.594      ;
+; 0.034 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.000        ; 2.386      ; 2.594      ;
+; 0.422 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; -0.500       ; 2.386      ; 2.482      ;
+; 0.422 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; -0.500       ; 2.386      ; 2.482      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'BtnIn'                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; BtnIn ; Rise       ; BtnIn                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; Button                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.139  ; 0.355        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; Button                      ;
+; 0.139  ; 0.355        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|o               ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.460  ; 0.644        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; Button                      ;
+; 0.460  ; 0.644        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.659  ; 0.659        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.659  ; 0.659        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|o               ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'ResetEnable'                                                    ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target              ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; ResetEnable ; Rise       ; ResetEnable         ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|o ;
+; 0.357  ; 0.357        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; Paso|datad          ;
+; 0.379  ; 0.379        ; 0.000          ; High Pulse Width ; ResetEnable ; Fall       ; Paso                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.617  ; 0.617        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Fall       ; Paso                ;
+; 0.641  ; 0.641        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; Paso|datad          ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|o ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; SensSemIni ; ResetEnable ; 2.231 ; 2.582 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++------------+-------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+-------------+--------+--------+------------+-----------------+
+; SensSemIni ; ResetEnable ; -1.559 ; -1.890 ; Fall       ; ResetEnable     ;
++------------+-------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 5.153 ; 5.170 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 5.561 ; 5.573 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 5.573 ; 5.561 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 5.692 ; 5.710 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 4.527 ; 4.541 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 4.541 ; 4.527 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 4.660 ; 4.676 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 5.067 ; 5.083 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 5.453 ; 5.465 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 5.465 ; 5.453 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 5.584 ; 5.602 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 4.465 ; 4.481 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 4.481 ; 4.465 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 4.600 ; 4.614 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; BtnIn ; 0.697 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; BtnIn ; -0.003 ; -0.006              ;
++-------+--------+---------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------------+--------+---------------------------+
+; Clock       ; Slack  ; End Point TNS             ;
++-------------+--------+---------------------------+
+; BtnIn       ; -3.000 ; -5.198                    ;
+; ResetEnable ; -3.000 ; -3.000                    ;
++-------------+--------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'BtnIn'                                                                      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.697 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.500        ; 1.751      ; 1.531      ;
+; 0.697 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.500        ; 1.751      ; 1.531      ;
+; 0.740 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 1.000        ; 1.751      ; 1.988      ;
+; 0.740 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 1.000        ; 1.751      ; 1.988      ;
++-------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'BtnIn'                                                                        ;
++--------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.003 ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; 0.000        ; 1.802      ; 1.913      ;
+; -0.003 ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; 0.000        ; 1.802      ; 1.913      ;
+; 0.035  ; ResetEnable ; Button          ; ResetEnable  ; BtnIn       ; -0.500       ; 1.802      ; 1.451      ;
+; 0.035  ; ResetEnable ; EnableTime~reg0 ; ResetEnable  ; BtnIn       ; -0.500       ; 1.802      ; 1.451      ;
++--------+-------------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'BtnIn'                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; BtnIn ; Rise       ; BtnIn                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; Button                      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; -0.099 ; 0.117        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; Button                      ;
+; -0.099 ; 0.117        ; 0.216          ; High Pulse Width ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|o               ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; BtnIn ; Rise       ; BtnIn~input|i               ;
+; 0.697  ; 0.881        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; Button                      ;
+; 0.697  ; 0.881        ; 0.184          ; Low Pulse Width  ; BtnIn ; Fall       ; EnableTime~reg0             ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|inclk[0] ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~inputclkctrl|outclk   ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; Button|clk                  ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; EnableTime~reg0|clk         ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; BtnIn ; Rise       ; BtnIn~input|o               ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'ResetEnable'                                                    ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target              ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; ResetEnable ; Rise       ; ResetEnable         ;
+; 0.101  ; 0.101        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; Paso|datad          ;
+; 0.105  ; 0.105        ; 0.000          ; High Pulse Width ; ResetEnable ; Fall       ; Paso                ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|o ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Rise       ; ResetEnable~input|i ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; ResetEnable~input|o ;
+; 0.893  ; 0.893        ; 0.000          ; Low Pulse Width  ; ResetEnable ; Fall       ; Paso                ;
+; 0.898  ; 0.898        ; 0.000          ; High Pulse Width ; ResetEnable ; Rise       ; Paso|datad          ;
++--------+--------------+----------------+------------------+-------------+------------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; SensSemIni ; ResetEnable ; 1.186 ; 1.744 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++------------+-------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+-------------+--------+--------+------------+-----------------+
+; SensSemIni ; ResetEnable ; -0.771 ; -1.312 ; Fall       ; ResetEnable     ;
++------------+-------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 3.590 ; 3.613 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 3.859 ; 3.760 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 3.760 ; 3.859 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 3.908 ; 3.971 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 3.148 ; 3.056 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 3.056 ; 3.148 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 3.204 ; 3.260 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 3.531 ; 3.553 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 3.786 ; 3.690 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 3.690 ; 3.786 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 3.838 ; 3.898 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 3.108 ; 3.019 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 3.019 ; 3.108 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 3.167 ; 3.220 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; 0.198    ; -0.003  ; -3.000              ;
+;  BtnIn           ; N/A   ; N/A  ; 0.198    ; -0.003  ; -3.000              ;
+;  ResetEnable     ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; -0.006  ; -8.198              ;
+;  BtnIn           ; N/A   ; N/A  ; 0.000    ; -0.006  ; -5.198              ;
+;  ResetEnable     ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; SensSemIni ; ResetEnable ; 2.614 ; 3.034 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++------------+-------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+-------------+--------+--------+------------+-----------------+
+; SensSemIni ; ResetEnable ; -0.771 ; -1.312 ; Fall       ; ResetEnable     ;
++------------+-------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 5.396 ; 5.430 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 5.877 ; 5.863 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 5.863 ; 5.877 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 5.982 ; 6.026 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 4.704 ; 4.702 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 4.702 ; 4.704 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 4.821 ; 4.853 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++------------+-------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+-------------+-------+-------+------------+-----------------+
+; EnableTime ; BtnIn       ; 3.531 ; 3.553 ; Fall       ; BtnIn           ;
+; Rojo       ; BtnIn       ; 3.786 ; 3.690 ; Fall       ; BtnIn           ;
+; TalIni     ; BtnIn       ; 3.690 ; 3.786 ; Fall       ; BtnIn           ;
+; Verde      ; BtnIn       ; 3.838 ; 3.898 ; Fall       ; BtnIn           ;
+; Rojo       ; ResetEnable ; 3.108 ; 3.019 ; Fall       ; ResetEnable     ;
+; TalIni     ; ResetEnable ; 3.019 ; 3.108 ; Fall       ; ResetEnable     ;
+; Verde      ; ResetEnable ; 3.167 ; 3.220 ; Fall       ; ResetEnable     ;
++------------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Verde         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Rojo          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; EnableTime    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TalIni        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; BtnIn                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ResetEnable             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SensSemIni              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Verde         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; Rojo          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.36 V              ; -0.00946 V          ; 0.111 V                              ; 0.027 V                              ; 6.46e-10 s                  ; 6.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.36 V             ; -0.00946 V         ; 0.111 V                             ; 0.027 V                             ; 6.46e-10 s                 ; 6.2e-10 s                  ; Yes                       ; Yes                       ;
+; EnableTime    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; TalIni        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.36 V              ; -0.00946 V          ; 0.111 V                              ; 0.027 V                              ; 6.46e-10 s                  ; 6.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.36 V             ; -0.00946 V         ; 0.111 V                             ; 0.027 V                             ; 6.46e-10 s                 ; 6.2e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Verde         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; Rojo          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.72 V              ; -0.0408 V           ; 0.163 V                              ; 0.075 V                              ; 4.51e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.72 V             ; -0.0408 V          ; 0.163 V                             ; 0.075 V                             ; 4.51e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; EnableTime    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; TalIni        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.72 V              ; -0.0408 V           ; 0.163 V                              ; 0.075 V                              ; 4.51e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.72 V             ; -0.0408 V          ; 0.163 V                             ; 0.075 V                             ; 4.51e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------+
+; Recovery Transfers                                                 ;
++-------------+----------+----------+----------+----------+----------+
+; From Clock  ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+----------+----------+----------+----------+----------+
+; ResetEnable ; BtnIn    ; 0        ; 0        ; 2        ; 2        ;
++-------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Removal Transfers                                                  ;
++-------------+----------+----------+----------+----------+----------+
+; From Clock  ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+----------+----------+----------+----------+----------+
+; ResetEnable ; BtnIn    ; 0        ; 0        ; 2        ; 2        ;
++-------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Mar 18 12:49:11 2024
+Info: Command: quartus_sta Sem_ini -c Sem_ini
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Sem_ini.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name BtnIn BtnIn
+    Info (332105): create_clock -period 1.000 -name ResetEnable ResetEnable
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332146): Worst-case recovery slack is 0.207
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.207               0.000 BtnIn 
+Info (332146): Worst-case removal slack is 0.031
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.031               0.000 BtnIn 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -5.000 BtnIn 
+    Info (332119):    -3.000              -3.000 ResetEnable 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332146): Worst-case recovery slack is 0.198
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.198               0.000 BtnIn 
+Info (332146): Worst-case removal slack is 0.034
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.034               0.000 BtnIn 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -5.000 BtnIn 
+    Info (332119):    -3.000              -3.000 ResetEnable 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332146): Worst-case recovery slack is 0.697
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.697               0.000 BtnIn 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case removal slack is -0.003
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.003              -0.006 BtnIn 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -5.198 BtnIn 
+    Info (332119):    -3.000              -3.000 ResetEnable 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4731 megabytes
+    Info: Processing ended: Mon Mar 18 12:49:13 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

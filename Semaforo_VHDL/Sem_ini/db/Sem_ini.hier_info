@@ -1,0 +1,13 @@
+|Sem_ini
+BtnIn => EnableTime~reg0.CLK
+BtnIn => Button.CLK
+SensSemIni => Paso.DATAIN
+ResetEnable => Paso.LATCH_ENABLE
+ResetEnable => EnableTime~reg0.ACLR
+ResetEnable => Button.ACLR
+Verde <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+Rojo <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+EnableTime << EnableTime~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TalIni <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+
+

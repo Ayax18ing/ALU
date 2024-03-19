@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Back_sensor is
+    Port (
+       
+		  -- puertos de entrada
+        Senssal: in std_logic; 
+        
+        -- Puertos de salida
+		  StopTime: out std_logic;         --Detiene el contador con 1, mientras tanto, será 0
+        ResetTime: out std_logic         --Reset de todo el circuito
+        
+    );
+end Back_sensor;
+
+architecture arch_Back_sensor of Back_sensor is
+
+	back_process : process (Senssal) is
+		variable pos_ant_sens : std_logic;
+	begin
+		if Senssal='1' then
+			pos_ant_sens='1';
+		elsif (Senssal = '0' and pos_ant_sens = '1') then
+			StopTime = '1';
+			ResetTime = '0';
+		elsif (Senssal='0') then 
+			ResetTime = '1';
+			StopTime = '0';
+		end if;
+	end process;
+
+end arch_Back_sensor;

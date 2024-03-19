@@ -1,0 +1,229 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/19/2024 11:15:44"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Back_sensor
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Back_sensor_vlg_sample_tst(
+	CLK,
+	PresenceSensor,
+	sampler_tx
+);
+input  CLK;
+input  PresenceSensor;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLK or PresenceSensor)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Back_sensor_vlg_check_tst (
+	Reset,
+	StopTime,
+	sampler_rx
+);
+input  Reset;
+input  StopTime;
+input sampler_rx;
+
+reg  Reset_expected;
+reg  StopTime_expected;
+
+reg  Reset_prev;
+reg  StopTime_prev;
+
+reg  Reset_expected_prev;
+reg  StopTime_expected_prev;
+
+reg  last_Reset_exp;
+reg  last_StopTime_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Reset_prev = Reset;
+	StopTime_prev = StopTime;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Reset_expected_prev = Reset_expected;
+	StopTime_expected_prev = StopTime_expected;
+end
+
+
+
+// expected Reset
+initial
+begin
+	Reset_expected = 1'bX;
+end 
+
+// expected StopTime
+initial
+begin
+	StopTime_expected = 1'bX;
+end 
+// generate trigger
+always @(Reset_expected or Reset or StopTime_expected or StopTime)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Reset = %b | expected StopTime = %b | ",Reset_expected_prev,StopTime_expected_prev);
+	$display("| real Reset = %b | real StopTime = %b | ",Reset_prev,StopTime_prev);
+`endif
+	if (
+		( Reset_expected_prev !== 1'bx ) && ( Reset_prev !== Reset_expected_prev )
+		&& ((Reset_expected_prev !== last_Reset_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Reset :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Reset_expected_prev);
+		$display ("     Real value = %b", Reset_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Reset_exp = Reset_expected_prev;
+	end
+	if (
+		( StopTime_expected_prev !== 1'bx ) && ( StopTime_prev !== StopTime_expected_prev )
+		&& ((StopTime_expected_prev !== last_StopTime_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port StopTime :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", StopTime_expected_prev);
+		$display ("     Real value = %b", StopTime_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_StopTime_exp = StopTime_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Back_sensor_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg PresenceSensor;
+// wires                                               
+wire Reset;
+wire StopTime;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Back_sensor i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.PresenceSensor(PresenceSensor),
+	.Reset(Reset),
+	.StopTime(StopTime)
+);
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	#5000;
+end 
+
+// PresenceSensor
+initial
+begin
+	PresenceSensor = 1'b0;
+	PresenceSensor = #240000 1'b1;
+	PresenceSensor = #190000 1'b0;
+end 
+
+Back_sensor_vlg_sample_tst tb_sample (
+	.CLK(CLK),
+	.PresenceSensor(PresenceSensor),
+	.sampler_tx(sampler)
+);
+
+Back_sensor_vlg_check_tst tb_out(
+	.Reset(Reset),
+	.StopTime(StopTime),
+	.sampler_rx(sampler)
+);
+endmodule
+

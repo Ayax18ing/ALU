@@ -1,0 +1,44 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all; -- Usamos numeric_std en lugar de std_logic_arith y std_logic_unsigned
+
+entity contador_vehiculos is
+	port
+	(
+		-- Input ports
+		CLK	 : in  std_logic;
+		reset  : in std_logic;
+		enable : in std_logic;
+
+		-- Output ports
+		count	: out  std_logic_vector (4 downto 0);
+		min   : out std_logic
+	);
+end contador_vehiculos;
+
+
+architecture arch_Contador_as of contador_vehiculos is
+
+	signal cnt : integer range 0 to 31;
+	signal minSIG : integer;
+
+begin
+
+	pSeq : process (CLK, reset) is
+	begin
+		if (reset = '1') then
+			cnt <= 0;
+		elsif (CLK'event and CLK='1') then
+			if(enable='1') then
+				if (cnt = 59) then
+					cnt <= 0;
+					min <= '1';
+					min <= '0' after 10 ns;
+				else
+					cnt <= cnt +1;
+				end if;
+			end if;
+		end if;
+	end process;
+count <= std_logic_vector(to_unsigned(cnt, 5));
+end arch_Contador_as;

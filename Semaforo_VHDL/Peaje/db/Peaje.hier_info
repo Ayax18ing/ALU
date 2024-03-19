@@ -1,0 +1,429 @@
+|Peaje
+CLK => Divisor:Divisor_frecuencias.clk
+Sens_Front => Front_sensor:Front_sensor_funcion.Sens
+Sens_Back => Back_sensor:Back_sensor_funcion.PresenceSensor
+Butt_sema => Sem_ini:Semaforo_Talanquera_inical.BtnIn
+Butt_inten => Front_sensor:Front_sensor_funcion.Button
+Cat_ID[0] => Front_sensor:Front_sensor_funcion.b[0]
+Cat_ID[1] => Front_sensor:Front_sensor_funcion.b[1]
+Cat_ID[2] => Front_sensor:Front_sensor_funcion.b[2]
+Cat_ID[3] => Front_sensor:Front_sensor_funcion.b[3]
+Cat_ID[4] => Front_sensor:Front_sensor_funcion.b[4]
+Sema_ini_verde <= Sem_ini:Semaforo_Talanquera_inical.Verde
+Sema_ini_rojo <= Sem_ini:Semaforo_Talanquera_inical.Rojo
+Sema_fin_verde <= Sem_fin:Semaforo_Talanquera_final.verde
+Sema_fin_rojo <= Sem_fin:Semaforo_Talanquera_final.rojo
+Tal_ini <= Sem_ini:Semaforo_Talanquera_inical.TalIni
+Tal_fin <= Sem_fin:Semaforo_Talanquera_final.talfin
+Alarma <= Front_sensor:Front_sensor_funcion.alarma
+dinero[0] <= Front_sensor:Front_sensor_funcion.dinero[0]
+dinero[1] <= Front_sensor:Front_sensor_funcion.dinero[1]
+dinero[2] <= Front_sensor:Front_sensor_funcion.dinero[2]
+dinero[3] <= Front_sensor:Front_sensor_funcion.dinero[3]
+dinero[4] <= Front_sensor:Front_sensor_funcion.dinero[4]
+tiempo_DE[0] <= BCD7Seg:Display7seg_dec.F[0]
+tiempo_DE[1] <= BCD7Seg:Display7seg_dec.F[1]
+tiempo_DE[2] <= BCD7Seg:Display7seg_dec.F[2]
+tiempo_DE[3] <= BCD7Seg:Display7seg_dec.F[3]
+tiempo_DE[4] <= BCD7Seg:Display7seg_dec.F[4]
+tiempo_DE[5] <= BCD7Seg:Display7seg_dec.F[5]
+tiempo_DE[6] <= BCD7Seg:Display7seg_dec.F[6]
+tiempo_UN[0] <= BCD7Seg:Display7seg_un.F[0]
+tiempo_UN[1] <= BCD7Seg:Display7seg_un.F[1]
+tiempo_UN[2] <= BCD7Seg:Display7seg_un.F[2]
+tiempo_UN[3] <= BCD7Seg:Display7seg_un.F[3]
+tiempo_UN[4] <= BCD7Seg:Display7seg_un.F[4]
+tiempo_UN[5] <= BCD7Seg:Display7seg_un.F[5]
+tiempo_UN[6] <= BCD7Seg:Display7seg_un.F[6]
+Vehiculos_DE[0] <= BCD7Seg:Display7seg_dec_ve.F[0]
+Vehiculos_DE[1] <= BCD7Seg:Display7seg_dec_ve.F[1]
+Vehiculos_DE[2] <= BCD7Seg:Display7seg_dec_ve.F[2]
+Vehiculos_DE[3] <= BCD7Seg:Display7seg_dec_ve.F[3]
+Vehiculos_DE[4] <= BCD7Seg:Display7seg_dec_ve.F[4]
+Vehiculos_DE[5] <= BCD7Seg:Display7seg_dec_ve.F[5]
+Vehiculos_DE[6] <= BCD7Seg:Display7seg_dec_ve.F[6]
+Vehiculos_UN[0] <= BCD7Seg:Display7seg_un_ve.F[0]
+Vehiculos_UN[1] <= BCD7Seg:Display7seg_un_ve.F[1]
+Vehiculos_UN[2] <= BCD7Seg:Display7seg_un_ve.F[2]
+Vehiculos_UN[3] <= BCD7Seg:Display7seg_un_ve.F[3]
+Vehiculos_UN[4] <= BCD7Seg:Display7seg_un_ve.F[4]
+Vehiculos_UN[5] <= BCD7Seg:Display7seg_un_ve.F[5]
+Vehiculos_UN[6] <= BCD7Seg:Display7seg_un_ve.F[6]
+
+
+|Peaje|Divisor:Divisor_frecuencias
+clk => out2~reg0.CLK
+clk => out1~reg0.CLK
+clk => count2[0].CLK
+clk => count2[1].CLK
+clk => count2[2].CLK
+clk => count2[3].CLK
+clk => count2[4].CLK
+clk => count2[5].CLK
+clk => count2[6].CLK
+clk => count2[7].CLK
+clk => count2[8].CLK
+clk => count2[9].CLK
+clk => count2[10].CLK
+clk => count2[11].CLK
+clk => count2[12].CLK
+clk => count2[13].CLK
+clk => count2[14].CLK
+clk => count2[15].CLK
+clk => count2[16].CLK
+clk => count2[17].CLK
+clk => count2[18].CLK
+clk => count2[19].CLK
+clk => count2[20].CLK
+clk => count2[21].CLK
+clk => count2[22].CLK
+clk => count2[23].CLK
+clk => count2[24].CLK
+clk => count1[0].CLK
+clk => count1[1].CLK
+clk => count1[2].CLK
+clk => count1[3].CLK
+clk => count1[4].CLK
+clk => count1[5].CLK
+clk => count1[6].CLK
+clk => count1[7].CLK
+clk => count1[8].CLK
+clk => count1[9].CLK
+clk => count1[10].CLK
+clk => count1[11].CLK
+clk => count1[12].CLK
+clk => count1[13].CLK
+clk => count1[14].CLK
+clk => count1[15].CLK
+clk => count1[16].CLK
+clk => count1[17].CLK
+clk => count1[18].CLK
+clk => count1[19].CLK
+clk => count1[20].CLK
+clk => count1[21].CLK
+clk => count1[22].CLK
+clk => count1[23].CLK
+clk => count1[24].CLK
+clk => count1[25].CLK
+out1 <= out1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|Sem_ini:Semaforo_Talanquera_inical
+BtnIn => EnableTime~reg0.CLK
+BtnIn => Button.CLK
+SensSemIni => Paso.DATAIN
+ResetEnable => Paso.LATCH_ENABLE
+ResetEnable => EnableTime~reg0.ACLR
+ResetEnable => Button.ACLR
+Verde <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+Rojo <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+EnableTime <= EnableTime~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TalIni <= Talanquera.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|Front_sensor:Front_sensor_funcion
+Reset => \Detector:deten_pro.IN1
+Reset => \Detector:var_alarma.ACLR
+Reset => enable.ACLR
+Reset => cerrado.PRESET
+Button => \Detector:var_alarma.IN1
+Button => \Detector:deten_pro.IN0
+b[0] => Equal0.IN0
+b[1] => Equal0.IN1
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+b[4] => ~NO_FANOUT~
+Sens => \Detector:var_alarma.IN1
+Sens => \Detector:deten_pro.IN1
+Sens => cont_vehiculo.DATAIN
+Sens => cerrado.CLK
+Sens => enable.CLK
+Sens => cerrado.ENA
+Sens => enable.ENA
+alarma <= \Detector:var_alarma.DB_MAX_OUTPUT_PORT_TYPE
+cont_vehiculo <= Sens.DB_MAX_OUTPUT_PORT_TYPE
+EN_salida <= enable.DB_MAX_OUTPUT_PORT_TYPE
+Senal_cerrado <= cerrado.DB_MAX_OUTPUT_PORT_TYPE
+dinero[0] <= <GND>
+dinero[1] <= <GND>
+dinero[2] <= <GND>
+dinero[3] <= <GND>
+dinero[4] <= <GND>
+
+
+|Peaje|Sem_fin:Semaforo_Talanquera_final
+clk1 => rojo$latch.DATAIN
+clk2 => verde.DATAB
+limite[0] => LessThan0.IN6
+limite[1] => LessThan0.IN5
+limite[2] => LessThan0.IN4
+enable => Reloj.IN1
+enable => verde.IN1
+enable => rojo$latch.LATCH_ENABLE
+verde <= verde$latch.DB_MAX_OUTPUT_PORT_TYPE
+rojo <= rojo$latch.DB_MAX_OUTPUT_PORT_TYPE
+talfin <= talfin$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|Back_sensor:Back_sensor_funcion
+PresenceSensor => Pul_time.DATAA
+PresenceSensor => cnt.OUTPUTSELECT
+PresenceSensor => cnt.OUTPUTSELECT
+PresenceSensor => Pul_reset.DATAA
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => Pul_time.CLK
+CLK => Pul_reset.CLK
+Reset <= Pul_reset.DB_MAX_OUTPUT_PORT_TYPE
+StopTime <= Pul_time.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|Contador_tiempo:Contador_tiempo_funcion
+CLK => minsal~reg0.CLK
+CLK => stop.CLK
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => cnt[2].CLK
+CLK => cnt[3].CLK
+CLK => cnt[4].CLK
+enable => minsal~reg0.ENA
+enable => stop.ENA
+enable => cnt[0].ENA
+enable => cnt[1].ENA
+enable => cnt[2].ENA
+enable => cnt[3].ENA
+enable => cnt[4].ENA
+stop_time => cnt.OUTPUTSELECT
+stop_time => cnt.OUTPUTSELECT
+stop_time => cnt.OUTPUTSELECT
+stop_time => cnt.OUTPUTSELECT
+stop_time => cnt.OUTPUTSELECT
+stop_time => minsal.OUTPUTSELECT
+stop_time => stop.DATAIN
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+minsal <= minsal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|Conversor:Conversor_tiempo
+Sum_Con[0] => Div0.IN8
+Sum_Con[0] => Mod0.IN9
+Sum_Con[1] => Div0.IN7
+Sum_Con[1] => Mod0.IN8
+Sum_Con[2] => Div0.IN6
+Sum_Con[2] => Mod0.IN7
+Sum_Con[3] => Div0.IN5
+Sum_Con[3] => Mod0.IN6
+Sum_Con[4] => Div0.IN4
+Sum_Con[4] => Mod0.IN5
+Dec[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|BCD7Seg:Display7seg_dec
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+F[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|BCD7Seg:Display7seg_un
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+F[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|contador_vehiculos:Display7seg_vehiculos
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => cnt[2].CLK
+CLK => cnt[3].CLK
+CLK => cnt[4].CLK
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+reset => cnt[4].ACLR
+enable => cnt[0].ENA
+enable => cnt[4].ENA
+enable => cnt[3].ENA
+enable => cnt[2].ENA
+enable => cnt[1].ENA
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+min <= <GND>
+
+
+|Peaje|Conversor:Conversor_vehiculos
+Sum_Con[0] => Div0.IN8
+Sum_Con[0] => Mod0.IN9
+Sum_Con[1] => Div0.IN7
+Sum_Con[1] => Mod0.IN8
+Sum_Con[2] => Div0.IN6
+Sum_Con[2] => Mod0.IN7
+Sum_Con[3] => Div0.IN5
+Sum_Con[3] => Mod0.IN6
+Sum_Con[4] => Div0.IN4
+Sum_Con[4] => Mod0.IN5
+Dec[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Dec[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Uni[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|BCD7Seg:Display7seg_dec_ve
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+F[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Peaje|BCD7Seg:Display7seg_un_ve
+IA => Mux0.IN16
+IA => Mux1.IN16
+IA => Mux2.IN16
+IA => Mux3.IN16
+IA => Mux4.IN16
+IA => Mux5.IN16
+IA => Mux6.IN16
+IB => Mux0.IN17
+IB => Mux1.IN17
+IB => Mux2.IN17
+IB => Mux3.IN17
+IB => Mux4.IN17
+IB => Mux5.IN17
+IB => Mux6.IN17
+IC => Mux0.IN18
+IC => Mux1.IN18
+IC => Mux2.IN18
+IC => Mux3.IN18
+IC => Mux4.IN18
+IC => Mux5.IN18
+IC => Mux6.IN18
+ID => Mux0.IN19
+ID => Mux1.IN19
+ID => Mux2.IN19
+ID => Mux3.IN19
+ID => Mux4.IN19
+ID => Mux5.IN19
+ID => Mux6.IN19
+F[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

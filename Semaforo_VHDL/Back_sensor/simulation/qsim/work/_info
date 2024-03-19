@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Back_sensor\simulation\qsim
+vBack_sensor
+Z1 !s100 >lEHJHS0TighLYkN^QZ5O1
+Z2 I=?36^T_;]SQ9LD5U@mW=>3
+Z3 V``B8hdF[`he:NF=V2l8NX3
+Z4 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Back_sensor\simulation\qsim
+Z5 w1710864945
+Z6 8Back_sensor.vo
+Z7 FBack_sensor.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Back_sensor.vo|
+Z10 o-work work -O0
+Z11 n@back_sensor
+!i10b 1
+!s85 0
+Z12 !s108 1710864948.148000
+Z13 !s107 Back_sensor.vo|
+!s101 -O0
+vBack_sensor_vlg_check_tst
+!i10b 1
+Z14 !s100 C<i[bYWC7Ra6hzY5l@N@o2
+Z15 IdM0F36?0g0XaBnCn@_?dK2
+Z16 V[YdOl]=4GADKQTi:aRObo2
+R4
+Z17 w1710864944
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z20 !s108 1710864948.268000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@back_sensor_vlg_check_tst
+vBack_sensor_vlg_sample_tst
+!i10b 1
+Z24 !s100 W;F^dNnfTeI:cS7OIQOG12
+Z25 I2K9]^T0MH=JWi]6`Y;=JE3
+Z26 VXHh6>JlASMUH<PL=:no2E1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@back_sensor_vlg_sample_tst
+vBack_sensor_vlg_vec_tst
+!i10b 1
+!s100 K2V=iVeJ>>P=4]QO=iFg:2
+IC^OKAI6a9K67LTgH[jEa11
+Z28 V6EodDUhXBP^5LgPU[dPoQ2
+R4
+R17
+R18
+R19
+Z29 L0 181
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@back_sensor_vlg_vec_tst

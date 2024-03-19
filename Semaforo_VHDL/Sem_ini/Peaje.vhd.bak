@@ -1,0 +1,82 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+entity Peaje is
+	port
+	(
+		-- Input ports
+		CLK	: in  std_logic;
+		Sens_Front	: in  std_logic;
+		Sens_Back	: in  std_logic;
+		Butt	: in  std_logic;
+		Cat_ID	: in  std_logic_vector (4 downto 0);
+
+		-- Inout ports
+		Sem_ini	: out std_logic;
+		Sem_fin	: out std_logic;
+		Tal_ini	: out std_logic;
+		Tal_fin	: out std_logic;
+		Alarma   : out std_logic
+	);
+end <entity_name>;
+architecture arch_Peaje of Peaje is
+	
+	Component Sem_ini 
+    port (
+        -- Entrada
+        BtnIn       : in std_logic;   
+        SensSemIni  : in std_logic;
+        ResetEnable : in std_logic;
+        
+        -- Salida
+        Verde       : out std_logic;
+        Rojo        : out std_logic;
+        EnableTime  : buffer std_logic;
+        TalIni      : out std_logic
+    );
+	end Component;
+	
+	Component Front_sensor 
+	port
+	(
+		-- Input ports
+		Reset  : in  std_logic;                       --pulso de reset
+		Button : in  std_logic;                       --comparacion de categoria
+		b   	 : in  std_logic_vector (4 downto 0);   --registro de categoria e ID
+		Sens 	 : in  std_logic;                       --sensor fisico de presencia
+
+		-- Output ports
+		alarma     	  : out std_logic:='0';                --alarma por demasiados intentos
+		cont_vehiculo : out std_logic;                --pulso para el contador de vehiculos
+		EN_salida     : out std_logic;                --habilita talanquera de salida
+		Senal_cerrado : out std_logic;
+		dinero        : out std_logic_vector(4 downto 0)
+	);
+	end Component;
+	
+	Component Sem_fin
+    port (
+        clk1 : in std_logic;
+		  clk2 : in std_logic;											      			-- Señales de reloj
+        limite : in integer range 0 to 5;											-- Límite de segundos (Salida contador de tiempo)
+        enable : in std_logic;															-- Entrada habilitadora
+        verde, rojo, talfin : buffer std_logic										-- Salidas
+    );
+	end Component;
+	
+	Component Back_sensor
+    Port (
+        PresenceSensor : in std_logic; -- Sensor de presencia
+        CLK            : in std_logic; -- Reloj
+        Reset          : out std_logic; -- Pulso de reset
+        StopTime       : out std_logic -- Pulso de stop time
+    );
+	end Component;
+	
+
+	signal Res_tot : std_logic;
+
+begin
+
+	
+
+end arch_Peaje;

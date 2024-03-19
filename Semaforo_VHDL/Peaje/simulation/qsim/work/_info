@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Peaje\simulation\qsim
+vPeaje
+Z1 !s100 @^e@>j>2nLEfCZ;jGzHT91
+Z2 I5?;MkEckBaYcIMi2gG4f22
+Z3 VfeH9>Un33b369[mPCLD=43
+Z4 dC:\Users\Samuel\Desktop\Lab-Quartus\Semaforo_VHDL\Peaje\simulation\qsim
+Z5 w1710882972
+Z6 8Peaje.vo
+Z7 FPeaje.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Peaje.vo|
+Z10 o-work work -O0
+Z11 n@peaje
+!i10b 1
+!s85 0
+Z12 !s108 1710882973.276000
+Z13 !s107 Peaje.vo|
+!s101 -O0
+vPeaje_vlg_check_tst
+!i10b 1
+Z14 !s100 cMN]lCC_lR;Pf;oYJfbmM1
+Z15 IfKnMQCO^LLBE=im<f[;4<2
+Z16 VLzZGmhcB63nobM_fG1AO=2
+R4
+Z17 w1710882971
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z20 !s108 1710882973.352000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@peaje_vlg_check_tst
+vPeaje_vlg_sample_tst
+!i10b 1
+Z24 !s100 I^TJcLfP]faV<Po3XWY461
+Z25 IIoSC]@X8KZ@;m=HYf9fJ01
+Z26 V36C@U<9N:;DRYfV0_HPG`1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@peaje_vlg_sample_tst
+vPeaje_vlg_vec_tst
+!i10b 1
+!s100 80O^@K5f=hShb9Y8JPzbc2
+ITzC=6GH8VlM]d@Qo0l5KF2
+Z28 VeQfY8kOo7h=jTGWCcffm:2
+R4
+R17
+R18
+R19
+Z29 L0 424
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@peaje_vlg_vec_tst

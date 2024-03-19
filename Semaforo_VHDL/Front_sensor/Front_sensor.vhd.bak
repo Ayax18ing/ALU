@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Front_sensor is
+	port
+	(
+		-- Input ports
+		Button : in  std_logic;
+		b   	 : in  std_logic_vector (4 downto 0);
+		Sens 	 : in  std_logic;
+
+		-- Output ports
+		alarma     	  : out std_logic;
+		cont_vehiculo : out std_logic;
+		cont_dinero   : out std_logic;
+		EN_salida     : out std_logic
+	);
+end Front_sensor;
+
+
+architecture arch_Front_sensor of Front_sensor is
+
+	signal Categoria : std_logic_vector (1 downto 0);
+
+begin
+
+	Categoria <= b(0) & b(1);
+	Detector : process (Sens, Button, Categoria) is
+		variable pos_ant_sens : std_logic;
+	begin
+		pos_ant_sens <= Sens;
+		if (Sens = '1' and pos_ant_sens = '0') then
+			pos_ant_sens <= Sens;
+			if (Button = '0') then
+				case Categoria is
+					when "00" =>
+            -- Acciones cuando estado es "00"
+            -- Puedes incluir cualquier código aquí
+					when "01" =>
+            -- Acciones cuando estado es "01"
+            -- Puedes incluir cualquier código aquí
+					when "10" =>
+            -- Acciones cuando estado es "10"
+            -- Puedes incluir cualquier código aquí
+					when others =>
+            -- Acciones por defecto cuando estado no coincide con ninguno de los casos anteriores
+            -- Puedes incluir cualquier código aquí
+				end case;
+			end if;
+		end if;
+	end process;
+
+end arch_Front_sensor;
