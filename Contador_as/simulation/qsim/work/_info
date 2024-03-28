@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Contador_as\simulation\qsim
+vContador_as
+Z1 !s100 mm=:A4VRKG902a8g?cHK42
+Z2 I7UMDQ=L8U]jXiYkhS;HoR3
+Z3 V=NTl=DX`9IUdiT`kkE[1[3
+Z4 dC:\Users\Samuel\Desktop\Lab-Quartus\Contador_as\simulation\qsim
+Z5 w1711599679
+Z6 8Contador_as.vo
+Z7 FContador_as.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Contador_as.vo|
+Z10 o-work work -O0
+Z11 n@contador_as
+!i10b 1
+!s85 0
+Z12 !s108 1711599680.373000
+Z13 !s107 Contador_as.vo|
+!s101 -O0
+vContador_as_vlg_check_tst
+!i10b 1
+Z14 !s100 Vb;n?C?fYmhRa5GX14ZYj1
+Z15 Il:UICcOGG`2zo1^P3nQdY0
+Z16 VKH5zcU2e=1=7fA92dPA113
+R4
+Z17 w1711599678
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1711599680.428000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z23 n@contador_as_vlg_check_tst
+vContador_as_vlg_sample_tst
+!i10b 1
+Z24 !s100 ElAV:BCYogz_MQ5DhJ=PQ1
+Z25 I@a1af_NlbFDS5CA8aG?kF3
+Z26 V0DkG3EXfQSZ9gKK4n]PFk2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@contador_as_vlg_sample_tst
+vContador_as_vlg_vec_tst
+!i10b 1
+Z28 !s100 aKZbWH49j_9i3_3NX;29F2
+Z29 IniUB`2<Bb2TSIgmZ?>jCP1
+Z30 VWEHQ=;94GB0jk?M3lY9QU3
+R4
+R17
+R18
+R19
+Z31 L0 272
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@contador_as_vlg_vec_tst

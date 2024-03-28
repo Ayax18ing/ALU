@@ -1,0 +1,31 @@
+|Contador_des
+CLK => minsal~reg0.CLK
+CLK => cnt[0].CLK
+CLK => cnt[1].CLK
+CLK => cnt[2].CLK
+CLK => cnt[3].CLK
+CLK => cnt[4].CLK
+CLK => cnt[5].CLK
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => minsal~reg0.ENA
+enable => cnt.OUTPUTSELECT
+enable => cnt.OUTPUTSELECT
+enable => cnt.OUTPUTSELECT
+enable => cnt.OUTPUTSELECT
+enable => cnt.OUTPUTSELECT
+enable => cnt.OUTPUTSELECT
+enable => minsal.OUTPUTSELECT
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= cnt[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= cnt[5].DB_MAX_OUTPUT_PORT_TYPE
+minsal <= minsal~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
