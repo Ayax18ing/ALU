@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Peaje_segundo_corte\Contador_tiempo\simulation\qsim
+vContador_tiempo
+Z1 IAc7bE2zX[;0TFkEfX[bC@0
+Z2 VY<oInBI?AjJKof^c;cIo[2
+Z3 dC:\Users\Samuel\Desktop\Lab-Quartus\Peaje_segundo_corte\Contador_tiempo\simulation\qsim
+Z4 w1715802660
+Z5 8Contador_tiempo.vo
+Z6 FContador_tiempo.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Contador_tiempo.vo|
+Z9 o-work work -O0
+Z10 n@contador_tiempo
+!i10b 1
+Z11 !s100 OXlj4[KG`Uem5T_9P=O3m0
+!s85 0
+Z12 !s108 1715802660.965000
+Z13 !s107 Contador_tiempo.vo|
+!s101 -O0
+vContador_tiempo_vlg_check_tst
+!i10b 1
+Z14 !s100 ]Q8?VZnId6]<hEOe0i;5f3
+Z15 I>:WhLXnQhjck8Pe^i3Iz13
+Z16 VLN<YD@6a_hh:?zPfkMH6<0
+R3
+Z17 w1715802658
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z20 !s108 1715802661.027000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z23 n@contador_tiempo_vlg_check_tst
+vContador_tiempo_vlg_sample_tst
+!i10b 1
+Z24 !s100 `QPWIPcK`UVe=iQ[_io`f0
+Z25 IR=j6FVoh2XSj?c17lIiG_2
+Z26 VIR36mJWK3f59fNAAmIGSB2
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@contador_tiempo_vlg_sample_tst
+vContador_tiempo_vlg_vec_tst
+!i10b 1
+Z28 !s100 S1z94]1K;baj>Nbd19YQa0
+Z29 I2??Fjoz?NH[bg9z1_WfNn3
+Z30 V<G@hTUgE61?`FJ[W3P[9O0
+R3
+R17
+R18
+R19
+Z31 L0 218
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@contador_tiempo_vlg_vec_tst

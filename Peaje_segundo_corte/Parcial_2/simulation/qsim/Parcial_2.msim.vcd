@@ -1,0 +1,1173 @@
+$comment
+	File created using the following command:
+		vcd file Parcial_2.msim.vcd -direction
+$end
+$date
+	Wed May 15 14:53:08 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Parcial_2_vlg_vec_tst $end
+$var reg 1 ! B_sen $end
+$var reg 1 " Boton_int $end
+$var reg 2 # Ca_iden [1:0] $end
+$var reg 1 $ CLK $end
+$var reg 1 % F_sen $end
+$var reg 3 & Id_iden [2:0] $end
+$var reg 1 ' reset $end
+$var reg 1 ( S_Ha $end
+$var wire 1 ) Alm $end
+$var wire 1 * Cont_D $end
+$var wire 1 + Sem_Fin_R $end
+$var wire 1 , Sem_Fin_V $end
+$var wire 1 - Sem_Ini_R $end
+$var wire 1 . Sem_Ini_V $end
+$var wire 1 / Tal_Fin $end
+$var wire 1 0 Tal_Ini $end
+$var wire 1 1 tiempo_DE [6] $end
+$var wire 1 2 tiempo_DE [5] $end
+$var wire 1 3 tiempo_DE [4] $end
+$var wire 1 4 tiempo_DE [3] $end
+$var wire 1 5 tiempo_DE [2] $end
+$var wire 1 6 tiempo_DE [1] $end
+$var wire 1 7 tiempo_DE [0] $end
+$var wire 1 8 tiempo_UN [6] $end
+$var wire 1 9 tiempo_UN [5] $end
+$var wire 1 : tiempo_UN [4] $end
+$var wire 1 ; tiempo_UN [3] $end
+$var wire 1 < tiempo_UN [2] $end
+$var wire 1 = tiempo_UN [1] $end
+$var wire 1 > tiempo_UN [0] $end
+$var wire 1 ? Vehiculos_DE [6] $end
+$var wire 1 @ Vehiculos_DE [5] $end
+$var wire 1 A Vehiculos_DE [4] $end
+$var wire 1 B Vehiculos_DE [3] $end
+$var wire 1 C Vehiculos_DE [2] $end
+$var wire 1 D Vehiculos_DE [1] $end
+$var wire 1 E Vehiculos_DE [0] $end
+$var wire 1 F Vehiculos_UN [6] $end
+$var wire 1 G Vehiculos_UN [5] $end
+$var wire 1 H Vehiculos_UN [4] $end
+$var wire 1 I Vehiculos_UN [3] $end
+$var wire 1 J Vehiculos_UN [2] $end
+$var wire 1 K Vehiculos_UN [1] $end
+$var wire 1 L Vehiculos_UN [0] $end
+$var wire 1 M sampler $end
+$scope module i1 $end
+$var wire 1 N gnd $end
+$var wire 1 O vcc $end
+$var wire 1 P unknown $end
+$var tri1 1 Q devclrn $end
+$var tri1 1 R devpor $end
+$var tri1 1 S devoe $end
+$var wire 1 T Id_iden[0]~input_o $end
+$var wire 1 U Id_iden[1]~input_o $end
+$var wire 1 V Id_iden[2]~input_o $end
+$var wire 1 W Sem_Ini_R~output_o $end
+$var wire 1 X Sem_Ini_V~output_o $end
+$var wire 1 Y Sem_Fin_R~output_o $end
+$var wire 1 Z Sem_Fin_V~output_o $end
+$var wire 1 [ Tal_Ini~output_o $end
+$var wire 1 \ Tal_Fin~output_o $end
+$var wire 1 ] Alm~output_o $end
+$var wire 1 ^ Cont_D~output_o $end
+$var wire 1 _ tiempo_DE[0]~output_o $end
+$var wire 1 ` tiempo_DE[1]~output_o $end
+$var wire 1 a tiempo_DE[2]~output_o $end
+$var wire 1 b tiempo_DE[3]~output_o $end
+$var wire 1 c tiempo_DE[4]~output_o $end
+$var wire 1 d tiempo_DE[5]~output_o $end
+$var wire 1 e tiempo_DE[6]~output_o $end
+$var wire 1 f tiempo_UN[0]~output_o $end
+$var wire 1 g tiempo_UN[1]~output_o $end
+$var wire 1 h tiempo_UN[2]~output_o $end
+$var wire 1 i tiempo_UN[3]~output_o $end
+$var wire 1 j tiempo_UN[4]~output_o $end
+$var wire 1 k tiempo_UN[5]~output_o $end
+$var wire 1 l tiempo_UN[6]~output_o $end
+$var wire 1 m Vehiculos_DE[0]~output_o $end
+$var wire 1 n Vehiculos_DE[1]~output_o $end
+$var wire 1 o Vehiculos_DE[2]~output_o $end
+$var wire 1 p Vehiculos_DE[3]~output_o $end
+$var wire 1 q Vehiculos_DE[4]~output_o $end
+$var wire 1 r Vehiculos_DE[5]~output_o $end
+$var wire 1 s Vehiculos_DE[6]~output_o $end
+$var wire 1 t Vehiculos_UN[0]~output_o $end
+$var wire 1 u Vehiculos_UN[1]~output_o $end
+$var wire 1 v Vehiculos_UN[2]~output_o $end
+$var wire 1 w Vehiculos_UN[3]~output_o $end
+$var wire 1 x Vehiculos_UN[4]~output_o $end
+$var wire 1 y Vehiculos_UN[5]~output_o $end
+$var wire 1 z Vehiculos_UN[6]~output_o $end
+$var wire 1 { CLK~input_o $end
+$var wire 1 | CLK~inputclkctrl_outclk $end
+$var wire 1 } Boton_int~input_o $end
+$var wire 1 ~ F_sen~input_o $end
+$var wire 1 !! reset~input_o $end
+$var wire 1 "! B_sen~input_o $end
+$var wire 1 #! Selector17~0_combout $end
+$var wire 1 $! Ca_iden[0]~input_o $end
+$var wire 1 %! Ca_iden[1]~input_o $end
+$var wire 1 &! Selector5~0_combout $end
+$var wire 1 '! Selector6~0_combout $end
+$var wire 1 (! next_state.intento3_484~combout $end
+$var wire 1 )! current_state.intento3~q $end
+$var wire 1 *! Selector7~0_combout $end
+$var wire 1 +! next_state.alerta_461~combout $end
+$var wire 1 ,! current_state.alerta~q $end
+$var wire 1 -! WideOr4~0_combout $end
+$var wire 1 .! Selector17~1_combout $end
+$var wire 1 /! Selector17~2_combout $end
+$var wire 1 0! next_state.exito_415~combout $end
+$var wire 1 1! current_state.exito~q $end
+$var wire 1 2! S_Ha~input_o $end
+$var wire 1 3! Selector2~0_combout $end
+$var wire 1 4! next_state.Ini_576~combout $end
+$var wire 1 5! current_state.Ini~0_combout $end
+$var wire 1 6! current_state.Ini~q $end
+$var wire 1 7! WideOr5~0_combout $end
+$var wire 1 8! Contador_de_tiempo|cnt[0]~5_combout $end
+$var wire 1 9! Contador_de_tiempo|cnt[0]~6 $end
+$var wire 1 :! Contador_de_tiempo|cnt[1]~7_combout $end
+$var wire 1 ;! Contador_de_tiempo|cnt[2]~12_combout $end
+$var wire 1 <! Contador_de_tiempo|cnt[1]~8 $end
+$var wire 1 =! Contador_de_tiempo|cnt[2]~9_combout $end
+$var wire 1 >! Contador_de_tiempo|cnt[2]~10 $end
+$var wire 1 ?! Contador_de_tiempo|cnt[3]~13_combout $end
+$var wire 1 @! Contador_de_tiempo|cnt[3]~14 $end
+$var wire 1 A! Contador_de_tiempo|cnt[4]~15_combout $end
+$var wire 1 B! Contador_de_tiempo|minsal~0_combout $end
+$var wire 1 C! Contador_de_tiempo|cnt[2]~11_combout $end
+$var wire 1 D! Contador_de_tiempo|minsal~1_combout $end
+$var wire 1 E! Contador_de_tiempo|minsal~2_combout $end
+$var wire 1 F! Contador_de_tiempo|minsal~q $end
+$var wire 1 G! Selector3~0_combout $end
+$var wire 1 H! Selector3~1_combout $end
+$var wire 1 I! next_state.paso_553~combout $end
+$var wire 1 J! current_state.paso~q $end
+$var wire 1 K! Selector4~0_combout $end
+$var wire 1 L! next_state.intento1_530~combout $end
+$var wire 1 M! current_state.intento1~q $end
+$var wire 1 N! Selector5~1_combout $end
+$var wire 1 O! next_state.intento2_507~combout $end
+$var wire 1 P! current_state.intento2~q $end
+$var wire 1 Q! WideOr2~0_combout $end
+$var wire 1 R! Selector21~0_combout $end
+$var wire 1 S! Selector21~0clkctrl_outclk $end
+$var wire 1 T! Selector8~0_combout $end
+$var wire 1 U! Selector8~1_combout $end
+$var wire 1 V! Selector8~2_combout $end
+$var wire 1 W! next_state.cobro_438~combout $end
+$var wire 1 X! current_state.cobro~q $end
+$var wire 1 Y! WideOr4~combout $end
+$var wire 1 Z! Sem_Ini~combout $end
+$var wire 1 [! semaforo_inicial|verde~0_combout $end
+$var wire 1 \! WideOr9~0_combout $end
+$var wire 1 ]! Parpadeo~combout $end
+$var wire 1 ^! Sem_Fin~combout $end
+$var wire 1 _! semaforo_final|rojo~0_combout $end
+$var wire 1 `! semaforo_final|verde~0_combout $end
+$var wire 1 a! semaforo_final|verde~combout $end
+$var wire 1 b! Alm~0_combout $end
+$var wire 1 c! WideOr7~0_combout $end
+$var wire 1 d! Alm$latch~combout $end
+$var wire 1 e! WideOr8~0_combout $end
+$var wire 1 f! Cont_D$latch~combout $end
+$var wire 1 g! Display7seg_un|Mux6~0_combout $end
+$var wire 1 h! Display7seg_un|Mux5~0_combout $end
+$var wire 1 i! Display7seg_un|Mux4~0_combout $end
+$var wire 1 j! Display7seg_un|Mux3~0_combout $end
+$var wire 1 k! Display7seg_un|Mux2~0_combout $end
+$var wire 1 l! Display7seg_un|Mux1~0_combout $end
+$var wire 1 m! Display7seg_un|Mux0~0_combout $end
+$var wire 1 n! Sem_Ini~clkctrl_outclk $end
+$var wire 1 o! Contador_de_vehiculos|cnt~4_combout $end
+$var wire 1 p! Contador_de_vehiculos|cnt~3_combout $end
+$var wire 1 q! Contador_de_vehiculos|cnt~2_combout $end
+$var wire 1 r! Contador_de_vehiculos|cnt~0_combout $end
+$var wire 1 s! Contador_de_vehiculos|cnt~1_combout $end
+$var wire 1 t! Conversor_a_bcd_vehicu|Div0|auto_generated|divider|divider|add_sub_4_result_int[1]~1_cout $end
+$var wire 1 u! Conversor_a_bcd_vehicu|Div0|auto_generated|divider|divider|add_sub_4_result_int[2]~3_cout $end
+$var wire 1 v! Conversor_a_bcd_vehicu|Div0|auto_generated|divider|divider|add_sub_4_result_int[3]~5_cout $end
+$var wire 1 w! Conversor_a_bcd_vehicu|Div0|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout $end
+$var wire 1 x! Conversor_a_bcd_vehicu|Div0|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout $end
+$var wire 1 y! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~1 $end
+$var wire 1 z! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~3 $end
+$var wire 1 {! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~4_combout $end
+$var wire 1 |! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[3]~5 $end
+$var wire 1 }! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[4]~7_cout $end
+$var wire 1 ~! Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[5]~8_combout $end
+$var wire 1 !" Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|StageOut[23]~2_combout $end
+$var wire 1 "" Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[2]~2_combout $end
+$var wire 1 #" Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|StageOut[22]~1_combout $end
+$var wire 1 $" Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|add_sub_4_result_int[1]~0_combout $end
+$var wire 1 %" Conversor_a_bcd_vehicu|Mod0|auto_generated|divider|divider|StageOut[21]~0_combout $end
+$var wire 1 &" Decodificador_bcd_vehi2|Mux6~0_combout $end
+$var wire 1 '" Decodificador_bcd_vehi2|Mux5~0_combout $end
+$var wire 1 (" Decodificador_bcd_vehi2|Mux4~0_combout $end
+$var wire 1 )" Decodificador_bcd_vehi2|Mux3~0_combout $end
+$var wire 1 *" Decodificador_bcd_vehi2|Mux2~0_combout $end
+$var wire 1 +" Decodificador_bcd_vehi2|Mux1~0_combout $end
+$var wire 1 ," Decodificador_bcd_vehi2|Mux0~0_combout $end
+$var wire 1 -" Contador_de_vehiculos|cnt [3] $end
+$var wire 1 ." Contador_de_vehiculos|cnt [2] $end
+$var wire 1 /" Contador_de_vehiculos|cnt [1] $end
+$var wire 1 0" Contador_de_vehiculos|cnt [0] $end
+$var wire 1 1" Contador_de_tiempo|cnt [4] $end
+$var wire 1 2" Contador_de_tiempo|cnt [3] $end
+$var wire 1 3" Contador_de_tiempo|cnt [2] $end
+$var wire 1 4" Contador_de_tiempo|cnt [1] $end
+$var wire 1 5" Contador_de_tiempo|cnt [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+b0 #
+0$
+0%
+b0 &
+1'
+0(
+0Y!
+0Z!
+0[!
+1\!
+0]!
+0^!
+1_!
+0`!
+0a!
+0b!
+0c!
+0d!
+1e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+1o!
+0p!
+0q!
+1r!
+0s!
+0t!
+1u!
+0v!
+1w!
+1x!
+0y!
+1z!
+0{!
+0|!
+1}!
+1~!
+0!"
+1""
+0#"
+1$"
+0%"
+0&"
+0'"
+0("
+0)"
+0*"
+0+"
+0,"
+00"
+0/"
+0."
+0-"
+05"
+04"
+03"
+02"
+01"
+0)
+0*
+1+
+0,
+1-
+0.
+0/
+00
+17
+06
+05
+04
+03
+02
+01
+1>
+0=
+0<
+0;
+0:
+09
+08
+1E
+0D
+0C
+0B
+0A
+0@
+0?
+1L
+0K
+0J
+0I
+0H
+0G
+0F
+xM
+0N
+1O
+xP
+1Q
+1R
+1S
+0T
+0U
+0V
+1W
+0X
+1Y
+0Z
+0[
+0\
+0]
+0^
+1_
+0`
+0a
+0b
+0c
+0d
+0e
+1f
+0g
+0h
+0i
+0j
+0k
+0l
+1m
+0n
+0o
+0p
+0q
+0r
+0s
+1t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+1!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+1-!
+0.!
+0/!
+00!
+01!
+02!
+13!
+14!
+05!
+06!
+17!
+18!
+09!
+0:!
+0;!
+1<!
+0=!
+0>!
+0?!
+1@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+1Q!
+1R!
+1S!
+0T!
+0U!
+0V!
+0W!
+0X!
+$end
+#10000
+1(
+12!
+0M
+1H!
+03!
+1I!
+04!
+15!
+#12500
+1$
+1{
+1|
+1M
+1J!
+16!
+1c!
+1G!
+1.!
+0e!
+0\!
+0H!
+1;!
+07!
+1Z!
+1n!
+1H!
+0I!
+1[
+0W
+10
+0-
+1[!
+1I!
+1X
+1.
+10"
+1p!
+0o!
+1,"
+1)"
+1("
+1'"
+1z
+1w
+1v
+1u
+1F
+1I
+1J
+1K
+#25000
+0$
+0{
+0|
+0M
+0[!
+0X
+0.
+#30000
+0(
+02!
+1M
+#37500
+1$
+1{
+1|
+0M
+1[!
+1X
+1.
+15"
+19!
+08!
+1m!
+1j!
+1i!
+1h!
+1:!
+1l
+1i
+1h
+1g
+18
+1;
+1<
+1=
+#50000
+1%
+0$
+1~
+0{
+0|
+1M
+1K!
+0G!
+0.!
+0[!
+1L!
+0H!
+0X
+0.
+0I!
+#60000
+1"
+1}
+0M
+1&!
+#62500
+1$
+1{
+1|
+1M
+1[!
+1X
+1.
+1M!
+0J!
+05"
+14"
+1N!
+0c!
+0K!
+1g!
+09!
+18!
+0<!
+0:!
+0Z!
+0m!
+1k!
+0j!
+0i!
+0n!
+1O!
+0L!
+1<!
+1:!
+1=!
+0f
+0[
+0l
+1j
+0i
+0h
+1W
+0>
+00
+08
+1:
+0;
+0<
+1-
+0[!
+0=!
+0X
+0.
+#75000
+0$
+0{
+0|
+0M
+#80000
+0"
+0}
+1M
+0R!
+0N!
+0&!
+1#!
+0S!
+1/!
+#87500
+1$
+1{
+1|
+0M
+1P!
+0M!
+15"
+1U!
+0Q!
+1.!
+1R!
+0#!
+19!
+08!
+1S!
+0k!
+1i!
+1V!
+0R!
+0/!
+0<!
+0:!
+0O!
+10!
+0j
+1h
+0S!
+0:
+1<
+1=!
+#100000
+1"
+0$
+1}
+0{
+0|
+1M
+0V!
+1R!
+1&!
+1S!
+1'!
+00!
+1(!
+#112500
+1$
+1{
+1|
+0M
+0P!
+1)!
+05"
+13"
+04"
+0'!
+1b!
+1*!
+09!
+18!
+1>!
+0=!
+1<!
+1:!
+1m!
+1j!
+0h!
+0(!
+1+!
+0:!
+1?!
+0>!
+1=!
+1l
+1i
+0g
+18
+1;
+0=
+1d!
+0?!
+1]
+1)
+#120000
+0"
+0}
+1M
+1V!
+0R!
+0&!
+0S!
+0*!
+#125000
+0$
+0{
+0|
+0M
+#137500
+1$
+1{
+1|
+1M
+0)!
+15"
+1,!
+0U!
+1Q!
+0.!
+19!
+08!
+1\!
+1Y!
+0-!
+0m!
+1l!
+0j!
+0V!
+1R!
+1/!
+1:!
+1]!
+0l
+1k
+0i
+1S!
+08
+19
+0;
+10!
+0+!
+#150000
+0%
+0$
+0~
+0{
+0|
+0M
+0_!
+0Y
+0+
+#162500
+1$
+1{
+1|
+1M
+1_!
+1Y
+1+
+11!
+05"
+14"
+0,!
+1c!
+0;!
+17!
+1#!
+09!
+18!
+1B!
+0<!
+0:!
+0b!
+0]!
+0\!
+1-!
+1m!
+0i!
+1<!
+1:!
+1D!
+1>!
+0=!
+1l
+0h
+18
+0<
+1^!
+0>!
+1=!
+1?!
+1`!
+1\
+1/
+0_!
+0?!
+0Y
+0+
+1a!
+1Z
+1,
+#175000
+0$
+0{
+0|
+0M
+0`!
+0a!
+0Z
+0,
+#180000
+1!
+1"!
+1M
+13!
+0#!
+14!
+0/!
+05!
+00!
+#187500
+1$
+1{
+1|
+0M
+1`!
+1a!
+1Z
+1,
+01!
+06!
+0c!
+0Y!
+1e!
+1\!
+0^!
+0`!
+0\
+0/
+0d!
+1_!
+0]
+1Y
+0)
+1+
+0a!
+0Z
+0,
+#200000
+0$
+0{
+0|
+1M
+#210000
+0!
+0"!
+0M
+#212500
+1$
+1{
+1|
+1M
+#225000
+0$
+0{
+0|
+0M
+#237500
+1$
+1{
+1|
+1M
+#250000
+0$
+0{
+0|
+0M
+#262500
+1$
+1{
+1|
+1M
+#275000
+0$
+0{
+0|
+0M
+#287500
+1$
+1{
+1|
+1M
+#300000
+0$
+0{
+0|
+0M
+#312500
+1$
+1{
+1|
+1M
+#325000
+0$
+0{
+0|
+0M
+#337500
+1$
+1{
+1|
+1M
+#350000
+0$
+0{
+0|
+0M
+#362500
+1$
+1{
+1|
+1M
+#375000
+0$
+0{
+0|
+0M
+#387500
+1$
+1{
+1|
+1M
+#400000
+0$
+0{
+0|
+0M
+#412500
+1$
+1{
+1|
+1M
+#425000
+0$
+0{
+0|
+0M
+#437500
+1$
+1{
+1|
+1M
+#450000
+0$
+0{
+0|
+0M
+#462500
+1$
+1{
+1|
+1M
+#475000
+0$
+0{
+0|
+0M
+#487500
+1$
+1{
+1|
+1M
+#500000
+0$
+0{
+0|
+0M
+#512500
+1$
+1{
+1|
+1M
+#525000
+0$
+0{
+0|
+0M
+#537500
+1$
+1{
+1|
+1M
+#550000
+0$
+0{
+0|
+0M
+#562500
+1$
+1{
+1|
+1M
+#575000
+0$
+0{
+0|
+0M
+#587500
+1$
+1{
+1|
+1M
+#600000
+0$
+0{
+0|
+0M
+#612500
+1$
+1{
+1|
+1M
+#625000
+0$
+0{
+0|
+0M
+#637500
+1$
+1{
+1|
+1M
+#650000
+0$
+0{
+0|
+0M
+#662500
+1$
+1{
+1|
+1M
+#675000
+0$
+0{
+0|
+0M
+#687500
+1$
+1{
+1|
+1M
+#700000
+0$
+0{
+0|
+0M
+#712500
+1$
+1{
+1|
+1M
+#725000
+0$
+0{
+0|
+0M
+#737500
+1$
+1{
+1|
+1M
+#750000
+0$
+0{
+0|
+0M
+#762500
+1$
+1{
+1|
+1M
+#775000
+0$
+0{
+0|
+0M
+#787500
+1$
+1{
+1|
+1M
+#800000
+0$
+0{
+0|
+0M
+#812500
+1$
+1{
+1|
+1M
+#825000
+0$
+0{
+0|
+0M
+#837500
+1$
+1{
+1|
+1M
+#850000
+0$
+0{
+0|
+0M
+#862500
+1$
+1{
+1|
+1M
+#875000
+0$
+0{
+0|
+0M
+#887500
+1$
+1{
+1|
+1M
+#900000
+0$
+0{
+0|
+0M
+#912500
+1$
+1{
+1|
+1M
+#925000
+0$
+0{
+0|
+0M
+#937500
+1$
+1{
+1|
+1M
+#950000
+0$
+0{
+0|
+0M
+#962500
+1$
+1{
+1|
+1M
+#975000
+0$
+0{
+0|
+0M
+#987500
+1$
+1{
+1|
+1M
+#1000000

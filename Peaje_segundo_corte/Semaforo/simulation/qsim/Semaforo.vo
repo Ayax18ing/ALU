@@ -1,0 +1,197 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "05/14/2024 10:05:45"
+
+// 
+// Device: Altera EP3C16F484C6 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Semaforo (
+	clk1,
+	clk2,
+	enable,
+	alarma,
+	verde,
+	rojo);
+input 	clk1;
+input 	clk2;
+input 	enable;
+input 	alarma;
+output 	verde;
+output 	rojo;
+
+// Design Ports Information
+// verde	=>  Location: PIN_B2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rojo	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk1	=>  Location: PIN_C6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// alarma	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// enable	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clk2	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \verde~output_o ;
+wire \rojo~output_o ;
+wire \enable~input_o ;
+wire \clk2~input_o ;
+wire \verde~0_combout ;
+wire \alarma~input_o ;
+wire \verde$latch~combout ;
+wire \clk1~input_o ;
+wire \rojo~0_combout ;
+
+
+// Location: IOOBUF_X0_Y27_N9
+cycloneiii_io_obuf \verde~output (
+	.i(\verde$latch~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\verde~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \verde~output .bus_hold = "false";
+defparam \verde~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X3_Y0_N23
+cycloneiii_io_obuf \rojo~output (
+	.i(\rojo~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\rojo~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \rojo~output .bus_hold = "false";
+defparam \rojo~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y26_N22
+cycloneiii_io_ibuf \enable~input (
+	.i(enable),
+	.ibar(gnd),
+	.o(\enable~input_o ));
+// synopsys translate_off
+defparam \enable~input .bus_hold = "false";
+defparam \enable~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y27_N22
+cycloneiii_io_ibuf \clk2~input (
+	.i(clk2),
+	.ibar(gnd),
+	.o(\clk2~input_o ));
+// synopsys translate_off
+defparam \clk2~input .bus_hold = "false";
+defparam \clk2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y26_N18
+cycloneiii_lcell_comb \verde~0 (
+// Equation(s):
+// \verde~0_combout  = (\enable~input_o  & \clk2~input_o )
+
+	.dataa(\enable~input_o ),
+	.datab(gnd),
+	.datac(\clk2~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\verde~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \verde~0 .lut_mask = 16'hA0A0;
+defparam \verde~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y26_N1
+cycloneiii_io_ibuf \alarma~input (
+	.i(alarma),
+	.ibar(gnd),
+	.o(\alarma~input_o ));
+// synopsys translate_off
+defparam \alarma~input .bus_hold = "false";
+defparam \alarma~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y26_N4
+cycloneiii_lcell_comb verde$latch(
+// Equation(s):
+// \verde$latch~combout  = (\alarma~input_o  & ((\verde$latch~combout ))) # (!\alarma~input_o  & (\verde~0_combout ))
+
+	.dataa(gnd),
+	.datab(\verde~0_combout ),
+	.datac(\verde$latch~combout ),
+	.datad(\alarma~input_o ),
+	.cin(gnd),
+	.combout(\verde$latch~combout ),
+	.cout());
+// synopsys translate_off
+defparam verde$latch.lut_mask = 16'hF0CC;
+defparam verde$latch.sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X5_Y29_N1
+cycloneiii_io_ibuf \clk1~input (
+	.i(clk1),
+	.ibar(gnd),
+	.o(\clk1~input_o ));
+// synopsys translate_off
+defparam \clk1~input .bus_hold = "false";
+defparam \clk1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y26_N24
+cycloneiii_lcell_comb \rojo~0 (
+// Equation(s):
+// \rojo~0_combout  = (\alarma~input_o  & ((\clk1~input_o ))) # (!\alarma~input_o  & (!\enable~input_o ))
+
+	.dataa(\enable~input_o ),
+	.datab(gnd),
+	.datac(\alarma~input_o ),
+	.datad(\clk1~input_o ),
+	.cin(gnd),
+	.combout(\rojo~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \rojo~0 .lut_mask = 16'hF505;
+defparam \rojo~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign verde = \verde~output_o ;
+
+assign rojo = \rojo~output_o ;
+
+endmodule

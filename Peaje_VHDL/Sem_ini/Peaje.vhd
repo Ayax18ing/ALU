@@ -99,7 +99,7 @@ architecture arch_Peaje of Peaje is
 		Sens 	 : in  std_logic;                       --sensor fisico de presencia
 
 		-- Output ports
-		alarma     	  : out std_logic:='0';                --alarma por demasiados intentos
+		alarma     	  : out std_logic:='0';           --alarma por demasiados intentos
 		cont_vehiculo : out std_logic;                --pulso para el contador de vehiculos
 		EN_salida     : out std_logic;                --habilita talanquera de salida
 		Senal_cerrado : out std_logic;
@@ -111,7 +111,7 @@ architecture arch_Peaje of Peaje is
     port (
         clk1 : in std_logic;
 		  clk2 : in std_logic;											      			-- Señales de reloj
-        limite : in std_logic_vector(2 downto 0);											-- Límite de segundos (Salida contador de tiempo)
+        limite : in std_logic_vector(2 downto 0);									-- Límite de segundos (Salida contador de tiempo)
         enable : in std_logic;															-- Entrada habilitadora
         verde, rojo, talfin : buffer std_logic										-- Salidas
     );
@@ -154,8 +154,8 @@ architecture arch_Peaje of Peaje is
 	signal Vehiculos             :std_logic_vector(4 downto 0);       --tiempo del contador de tiempo
 	signal pul_Ext :std_logic; 
 	signal pul_Ext_2 :std_logic; 
-	signal UN_Tiempo, DEC_Tiempo :std_logic_vector(3 downto 0);       --Decenas y unidades de SALUI 
-	signal UN_Vehiculos, DEC_Vehiculos :std_logic_vector(3 downto 0);       --Decenas y unidades de SALUI 
+	signal UN_Tiempo, DEC_Tiempo :std_logic_vector(3 downto 0);       --Decenas y unidades de Tiempo
+	signal UN_Vehiculos, DEC_Vehiculos :std_logic_vector(3 downto 0); --Decenas y unidades de Vehiculos 
 	
 
 begin

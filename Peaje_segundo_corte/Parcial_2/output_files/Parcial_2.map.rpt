@@ -1,0 +1,603 @@
+Analysis & Synthesis report for Parcial_2
+Wed May 15 15:42:47 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Parcial_2|current_state
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_tiempo|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0
+ 15. Port Connectivity Checks: "Semaforo:semaforo_final"
+ 16. Port Connectivity Checks: "Semaforo:semaforo_inicial"
+ 17. Port Connectivity Checks: "Conversor:Conversor_a_bcd_vehicu"
+ 18. Port Connectivity Checks: "Conversor:Conversor_a_bcd_tiempo"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 15 15:42:47 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Parcial_2                                  ;
+; Top-level Entity Name              ; Parcial_2                                  ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 183                                        ;
+;     Total combinational functions  ; 183                                        ;
+;     Dedicated logic registers      ; 71                                         ;
+; Total registers                    ; 71                                         ;
+; Total pins                         ; 50                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; Parcial_2          ; Parcial_2          ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; ../Semaforo/Semaforo.vhd                     ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Semaforo/Semaforo.vhd                     ;         ;
+; ../contador_vehiculos/contador_vehiculos.vhd ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/contador_vehiculos/contador_vehiculos.vhd ;         ;
+; ../Conversor/Conversor.vhd                   ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Conversor/Conversor.vhd                   ;         ;
+; ../Contador_tiempo/Contador_tiempo.vhd       ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Contador_tiempo/Contador_tiempo.vhd       ;         ;
+; ../Divisor/Divisor.vhd                       ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Divisor/Divisor.vhd                       ;         ;
+; Parcial_2.vhd                                ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/Parcial_2.vhd                   ;         ;
+; ../BCD7Seg/BCD7Seg.vhd                       ; yes             ; User VHDL File               ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/BCD7Seg/BCD7Seg.vhd                       ;         ;
+; lpm_divide.tdf                               ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                                     ;         ;
+; abs_divider.inc                              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                                    ;         ;
+; sign_div_unsign.inc                          ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                ;         ;
+; aglobal131.inc                               ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                     ;         ;
+; db/lpm_divide_b8m.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/lpm_divide_b8m.tdf           ;         ;
+; db/sign_div_unsign_9kh.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/sign_div_unsign_9kh.tdf      ;         ;
+; db/alt_u_div_t2f.tdf                         ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/alt_u_div_t2f.tdf            ;         ;
+; db/add_sub_unc.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/add_sub_unc.tdf              ;         ;
+; db/add_sub_vnc.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/add_sub_vnc.tdf              ;         ;
+; db/lpm_divide_7gm.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/lpm_divide_7gm.tdf           ;         ;
+; db/sign_div_unsign_8kh.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/sign_div_unsign_8kh.tdf      ;         ;
+; db/alt_u_div_r2f.tdf                         ; yes             ; Auto-Generated Megafunction  ; C:/Users/Samuel/Desktop/Lab-Quartus/Peaje_segundo_corte/Parcial_2/db/alt_u_div_r2f.tdf            ;         ;
++----------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 183       ;
+;                                             ;           ;
+; Total combinational functions               ; 183       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 37        ;
+;     -- 3 input functions                    ; 30        ;
+;     -- <=2 input functions                  ; 116       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 122       ;
+;     -- arithmetic mode                      ; 61        ;
+;                                             ;           ;
+; Total registers                             ; 71        ;
+;     -- Dedicated logic registers            ; 71        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 50        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 53        ;
+; Total fan-out                               ; 699       ;
+; Average fan-out                             ; 1.97      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Parcial_2                                    ; 183 (34)          ; 71 (8)       ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |Parcial_2                                                                                                                                  ; work         ;
+;    |BCD7Seg:Decodificador_bcd_vehi2|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|BCD7Seg:Decodificador_bcd_vehi2                                                                                                  ; work         ;
+;    |BCD7Seg:Display7seg_un|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|BCD7Seg:Display7seg_un                                                                                                           ; work         ;
+;    |Contador_tiempo:Contador_de_tiempo|       ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Contador_tiempo:Contador_de_tiempo                                                                                               ; work         ;
+;    |Conversor:Conversor_a_bcd_vehicu|         ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                       ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_7gm:auto_generated|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0|lpm_divide_7gm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider|     ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0|lpm_divide_7gm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_r2f:divider|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0|lpm_divide_7gm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_r2f:divider ; work         ;
+;       |lpm_divide:Mod0|                       ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_b8m:auto_generated|      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0|lpm_divide_b8m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider|     ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0|lpm_divide_b8m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_t2f:divider|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0|lpm_divide_b8m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_t2f:divider ; work         ;
+;    |Divisor:Divisor_de_frecuencias|           ; 103 (103)         ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Divisor:Divisor_de_frecuencias                                                                                                   ; work         ;
+;    |Semaforo:semaforo_final|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Semaforo:semaforo_final                                                                                                          ; work         ;
+;    |Semaforo:semaforo_inicial|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|Semaforo:semaforo_inicial                                                                                                        ; work         ;
+;    |contador_vehiculos:Contador_de_vehiculos| ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Parcial_2|contador_vehiculos:Contador_de_vehiculos                                                                                         ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Parcial_2|current_state                                                                                                                                                                      ;
++------------------------+---------------------+---------------------+----------------------+------------------------+------------------------+------------------------+--------------------+-------------------+
+; Name                   ; current_state.exito ; current_state.cobro ; current_state.alerta ; current_state.intento3 ; current_state.intento2 ; current_state.intento1 ; current_state.paso ; current_state.Ini ;
++------------------------+---------------------+---------------------+----------------------+------------------------+------------------------+------------------------+--------------------+-------------------+
+; current_state.Ini      ; 0                   ; 0                   ; 0                    ; 0                      ; 0                      ; 0                      ; 0                  ; 0                 ;
+; current_state.paso     ; 0                   ; 0                   ; 0                    ; 0                      ; 0                      ; 0                      ; 1                  ; 1                 ;
+; current_state.intento1 ; 0                   ; 0                   ; 0                    ; 0                      ; 0                      ; 1                      ; 0                  ; 1                 ;
+; current_state.intento2 ; 0                   ; 0                   ; 0                    ; 0                      ; 1                      ; 0                      ; 0                  ; 1                 ;
+; current_state.intento3 ; 0                   ; 0                   ; 0                    ; 1                      ; 0                      ; 0                      ; 0                  ; 1                 ;
+; current_state.alerta   ; 0                   ; 0                   ; 1                    ; 0                      ; 0                      ; 0                      ; 0                  ; 1                 ;
+; current_state.cobro    ; 0                   ; 1                   ; 0                    ; 0                      ; 0                      ; 0                      ; 0                  ; 1                 ;
+; current_state.exito    ; 1                   ; 0                   ; 0                    ; 0                      ; 0                      ; 0                      ; 0                  ; 1                 ;
++------------------------+---------------------+---------------------+----------------------+------------------------+------------------------+------------------------+--------------------+-------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Sem_Ini                                             ; WideOr4             ; yes                    ;
+; Sem_Fin                                             ; WideOr5             ; yes                    ;
+; Tal_Ini$latch                                       ; WideOr4             ; yes                    ;
+; Tal_Fin$latch                                       ; WideOr5             ; yes                    ;
+; Alm$latch                                           ; WideOr7             ; yes                    ;
+; Cont_D$latch                                        ; WideOr8             ; yes                    ;
+; Cont_V                                              ; WideOr4             ; yes                    ;
+; next_state.paso_549                                 ; Selector16          ; yes                    ;
+; next_state.alerta_457                               ; Selector17          ; yes                    ;
+; next_state.cobro_434                                ; Selector17          ; yes                    ;
+; next_state.exito_411                                ; Selector16          ; yes                    ;
+; next_state.Ini_572                                  ; Selector16          ; yes                    ;
+; next_state.intento3_480                             ; Selector17          ; yes                    ;
+; next_state.intento2_503                             ; Selector17          ; yes                    ;
+; next_state.intento1_526                             ; Selector16          ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 71    ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Parcial_2|Contador_tiempo:Contador_de_tiempo|cnt[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_tiempo|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                    ;
++------------------------+----------------+---------------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                                 ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                 ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                 ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                 ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                 ;
+; CBXI_PARAMETER         ; lpm_divide_b8m ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                 ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                          ;
++------------------------+----------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                    ;
++------------------------+----------------+---------------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                                 ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                 ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                 ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                 ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                 ;
+; CBXI_PARAMETER         ; lpm_divide_7gm ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                 ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                          ;
++------------------------+----------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                    ;
++------------------------+----------------+---------------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                                 ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                 ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                 ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                 ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                 ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                 ;
+; CBXI_PARAMETER         ; lpm_divide_b8m ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                 ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                          ;
++------------------------+----------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "Semaforo:semaforo_final" ;
++--------+-------+----------+-------------------------+
+; Port   ; Type  ; Severity ; Details                 ;
++--------+-------+----------+-------------------------+
+; alarma ; Input ; Info     ; Stuck at GND            ;
++--------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "Semaforo:semaforo_inicial" ;
++--------+-------+----------+---------------------------+
+; Port   ; Type  ; Severity ; Details                   ;
++--------+-------+----------+---------------------------+
+; alarma ; Input ; Info     ; Stuck at GND              ;
++--------+-------+----------+---------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "Conversor:Conversor_a_bcd_vehicu" ;
++---------+--------+------------------+------------------------+
+; Port    ; Type   ; Severity         ; Details                ;
++---------+--------+------------------+------------------------+
+; sum_con ; Input  ; Critical Warning ; Types are incompatible ;
+; dec     ; Output ; Critical Warning ; Types are incompatible ;
+; uni     ; Output ; Critical Warning ; Types are incompatible ;
++---------+--------+------------------+------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Conversor:Conversor_a_bcd_tiempo"       ;
++---------------+--------+------------------+------------------------+
+; Port          ; Type   ; Severity         ; Details                ;
++---------------+--------+------------------+------------------------+
+; sum_con       ; Input  ; Critical Warning ; Types are incompatible ;
+; sum_con[4..3] ; Input  ; Info             ; Stuck at GND           ;
+; dec           ; Output ; Critical Warning ; Types are incompatible ;
+; uni           ; Output ; Critical Warning ; Types are incompatible ;
++---------------+--------+------------------+------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed May 15 15:42:44 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parcial_2 -c Parcial_2
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/semaforo/semaforo.vhd
+    Info (12022): Found design unit 1: Semaforo-arch_Semaforo
+    Info (12023): Found entity 1: Semaforo
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/contador_vehiculos/contador_vehiculos.vhd
+    Info (12022): Found design unit 1: contador_vehiculos-arch_contador_vehiculos
+    Info (12023): Found entity 1: contador_vehiculos
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/conversor/conversor.vhd
+    Info (12022): Found design unit 1: Conversor-arch_Conversor
+    Info (12023): Found entity 1: Conversor
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/contador_tiempo/contador_tiempo.vhd
+    Info (12022): Found design unit 1: Contador_tiempo-arch_Contador_tiempo
+    Info (12023): Found entity 1: Contador_tiempo
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/divisor/divisor.vhd
+    Info (12022): Found design unit 1: Divisor-arch_Divisor_frecuencia
+    Info (12023): Found entity 1: Divisor
+Info (12021): Found 2 design units, including 1 entities, in source file parcial_2.vhd
+    Info (12022): Found design unit 1: Parcial_2-arch_Parcial_2
+    Info (12023): Found entity 1: Parcial_2
+Info (12021): Found 2 design units, including 1 entities, in source file /users/samuel/desktop/lab-quartus/peaje_segundo_corte/bcd7seg/bcd7seg.vhd
+    Info (12022): Found design unit 1: BCD7Seg-BCD7Seg_Arch
+    Info (12023): Found entity 1: BCD7Seg
+Info (12127): Elaborating entity "Parcial_2" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Parcial_2.vhd(105): object "Parpadeo" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at Parcial_2.vhd(127): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Parcial_2.vhd(137): signal "tiempo_limit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Parcial_2.vhd(147): signal "tiempo_limit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Parcial_2.vhd(151): signal "tiempo_limit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Parcial_2.vhd(159): signal "tiempo_limit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(125): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Sem_Ini", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Tal_Ini", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Sem_Fin", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Tal_Fin", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Alm", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Cont_V", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Parcial_2.vhd(181): inferring latch(es) for signal or variable "Cont_D", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Cont_D" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Cont_V" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Alm" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Tal_Fin" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Sem_Fin" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Tal_Ini" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "Sem_Ini" at Parcial_2.vhd(181)
+Info (10041): Inferred latch for "next_state.exito" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.cobro" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.alerta" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.intento3" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.intento2" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.intento1" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.paso" at Parcial_2.vhd(125)
+Info (10041): Inferred latch for "next_state.Ini" at Parcial_2.vhd(125)
+Info (12128): Elaborating entity "Divisor" for hierarchy "Divisor:Divisor_de_frecuencias"
+Info (12128): Elaborating entity "Contador_tiempo" for hierarchy "Contador_tiempo:Contador_de_tiempo"
+Info (12128): Elaborating entity "contador_vehiculos" for hierarchy "contador_vehiculos:Contador_de_vehiculos"
+Info (12128): Elaborating entity "Conversor" for hierarchy "Conversor:Conversor_a_bcd_tiempo"
+Info (12128): Elaborating entity "BCD7Seg" for hierarchy "BCD7Seg:Display7seg_dec"
+Info (12128): Elaborating entity "Semaforo" for hierarchy "Semaforo:semaforo_inicial"
+Warning (10492): VHDL Process Statement warning at Semaforo.vhd(22): signal "alarma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Semaforo.vhd(20): inferring latch(es) for signal or variable "rojo", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Semaforo.vhd(20): inferring latch(es) for signal or variable "verde", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "verde" at Semaforo.vhd(20)
+Warning (14026): LATCH primitive "Semaforo:semaforo_final|verde" is permanently enabled
+Warning (14026): LATCH primitive "Semaforo:semaforo_inicial|verde" is permanently enabled
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Conversor:Conversor_a_bcd_tiempo|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Conversor:Conversor_a_bcd_vehicu|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Conversor:Conversor_a_bcd_vehicu|Mod0"
+Info (12130): Elaborated megafunction instantiation "Conversor:Conversor_a_bcd_tiempo|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "Conversor:Conversor_a_bcd_tiempo|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_b8m.tdf
+    Info (12023): Found entity 1: lpm_divide_b8m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t2f.tdf
+    Info (12023): Found entity 1: alt_u_div_t2f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Info (12130): Elaborated megafunction instantiation "Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "Conversor:Conversor_a_bcd_vehicu|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7gm.tdf
+    Info (12023): Found entity 1: lpm_divide_7gm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_r2f.tdf
+    Info (12023): Found entity 1: alt_u_div_r2f
+Info (12130): Elaborated megafunction instantiation "Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "Conversor:Conversor_a_bcd_vehicu|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Tal_Ini$latch" merged with LATCH primitive "Sem_Ini"
+    Info (13026): Duplicate LATCH primitive "Cont_V" merged with LATCH primitive "Sem_Ini"
+    Info (13026): Duplicate LATCH primitive "Tal_Fin$latch" merged with LATCH primitive "Sem_Fin"
+Warning (13012): Latch Sem_Fin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.exito
+Warning (13012): Latch Cont_D$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.cobro
+Warning (13012): Latch next_state.paso_549 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contador_tiempo:Contador_de_tiempo|minsal
+Warning (13012): Latch next_state.alerta_457 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.intento3
+Warning (13012): Latch next_state.cobro_434 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.intento3
+Warning (13012): Latch next_state.exito_411 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contador_tiempo:Contador_de_tiempo|minsal
+Warning (13012): Latch next_state.intento3_480 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.intento2
+Warning (13012): Latch next_state.intento2_503 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_state.intento1
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "tiempo_DE[0]" is stuck at VCC
+    Warning (13410): Pin "tiempo_DE[1]" is stuck at GND
+    Warning (13410): Pin "tiempo_DE[2]" is stuck at GND
+    Warning (13410): Pin "tiempo_DE[3]" is stuck at GND
+    Warning (13410): Pin "tiempo_DE[4]" is stuck at GND
+    Warning (13410): Pin "tiempo_DE[5]" is stuck at GND
+    Warning (13410): Pin "tiempo_DE[6]" is stuck at GND
+    Warning (13410): Pin "Vehiculos_DE[0]" is stuck at VCC
+    Warning (13410): Pin "Vehiculos_DE[4]" is stuck at GND
+    Warning (13410): Pin "Vehiculos_DE[5]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Id_iden[0]"
+    Warning (15610): No output dependent on input pin "Id_iden[1]"
+    Warning (15610): No output dependent on input pin "Id_iden[2]"
+Info (21057): Implemented 240 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 190 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Wed May 15 15:42:47 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

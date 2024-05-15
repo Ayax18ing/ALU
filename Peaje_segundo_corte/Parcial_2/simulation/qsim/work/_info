@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Parcial_2\simulation\qsim
+vParcial_2
+Z1 I[eO5oI4@AdnHM;j8jW`6O1
+Z2 V5oFfkXQXAdXOl4CimT?JH2
+Z3 dC:\Users\Samuel\Desktop\Lab-Quartus\Peaje_segundo_corte\Parcial_2\simulation\qsim
+Z4 w1715802786
+Z5 8Parcial_2.vo
+Z6 FParcial_2.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Parcial_2.vo|
+Z9 o-work work -O0
+Z10 n@parcial_2
+!i10b 1
+Z11 !s100 <lBL]nD?8mWCj3zLGaf_B2
+!s85 0
+Z12 !s108 1715802787.703000
+Z13 !s107 Parcial_2.vo|
+!s101 -O0
+vParcial_2_vlg_check_tst
+!i10b 1
+Z14 !s100 V8Z`KIQaJkRO=Ha7AGM:e0
+Z15 I6:oHOMOd7N8X19EdUP`VH2
+Z16 VRH;CYZUYm;C[iX950AXdV3
+R3
+Z17 w1715802785
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z20 !s108 1715802787.765000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z23 n@parcial_2_vlg_check_tst
+vParcial_2_vlg_sample_tst
+!i10b 1
+Z24 !s100 MDXc_oVHaio8R@[n9TLJg3
+Z25 IlznPMn]:CfFLdSHLLmPnD2
+Z26 VJ[8n2zczUCf@`Q_HPDC_K3
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@parcial_2_vlg_sample_tst
+vParcial_2_vlg_vec_tst
+!i10b 1
+Z28 !s100 8DnDgzTl5EI;O7Rk^^4CK0
+Z29 ID3iYOEWS`a;cH@`c`fT8D0
+Z30 VQTgh^g8IE=T1jF@K3mPe?0
+R3
+R17
+R18
+R19
+Z31 L0 891
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@parcial_2_vlg_vec_tst

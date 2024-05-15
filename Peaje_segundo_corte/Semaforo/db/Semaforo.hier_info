@@ -1,0 +1,11 @@
+|Semaforo
+clk1 => rojo.DATAB
+clk2 => verde.DATAB
+enable => verde.OUTPUTSELECT
+enable => rojo.DATAA
+alarma => rojo.OUTPUTSELECT
+alarma => verde$latch.LATCH_ENABLE
+verde << verde$latch.DB_MAX_OUTPUT_PORT_TYPE
+rojo << rojo.DB_MAX_OUTPUT_PORT_TYPE
+
+

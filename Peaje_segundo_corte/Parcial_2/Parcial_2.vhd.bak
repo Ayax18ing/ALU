@@ -1,0 +1,141 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity Parcial_2 is
+    port (
+        S_Ha, F_sen, B_sen, Boton_int, CLK, reset : in std_logic;
+        Ca_iden : in std_logic_vector(1 downto 0);
+        Id_iden : in std_logic_vector(2 downto 0);
+        -- Output ports
+        Sem_Ini, Sem_Fin, Tal_Ini, Tal_Fin, Alm, Cont_V, Cont_T, Cont_D : out std_logic
+    );
+end Parcial_2;
+
+architecture arch_Parcial_2 of Parcial_2 is
+    type State_type is (Ini, paso, intento1, intento2, intento3, alerta, cobro, exito);
+    signal next_state : State_type;
+    signal current_state : State_type;
+    signal Sal : std_logic;
+
+    constant frecuencia : integer := 100000000;
+    constant retraso : integer := 500;
+    signal counter : integer range 0 to (frecuencia / 1000 * retraso);
+
+begin
+    STATE_MEMORY : process (CLK, reset)
+    begin
+        if (reset = '0') then
+            current_state <= Ini;
+        elsif (CLK'event and CLK = '1') then
+            current_state <= next_state;
+        end if;
+    end process;
+
+    NEXT_STATE_LOGIC : process (S_Ha, F_sen, B_sen, Id_iden, Ca_iden, Boton_int, Sal)
+    begin
+        case (current_state) is
+            when Ini =>
+                if (S_Ha = '1') then
+                    next_state <= paso;
+                else
+                    next_state <= Ini;
+                end if;
+            when paso =>
+                if (F_sen = '1') then
+                    next_state <= intento1;
+                else
+                    next_state <= paso;
+                end if;
+            when intento1 =>
+                if (Boton_int = '1' and Ca_iden = "00") then
+                    next_state <= intento2;
+                elsif (Ca_iden /= "00" and Boton_int = '1')then
+                    next_state <= cobro;
+                end if;
+            when intento2 =>
+                if (Boton_int = '1' and Ca_iden = "00") then
+                    next_state <= intento3;
+                elsif (Ca_iden /= "00" and Boton_int = '1')then
+                    next_state <= cobro;
+                end if;
+            when intento3 =>
+                if (Boton_int = '1' and Ca_iden = "00") then
+                    next_state <= alerta;
+                elsif (Ca_iden /= "00" and Boton_int = '1') then
+                    next_state <= cobro;
+                end if;
+            when cobro =>
+                next_state <= exito;
+            when alerta =>
+                next_state <= exito;
+            when exito =>
+                if (B_sen = '1') then
+                    next_state <= Ini;
+                else
+                    next_state <= exito;
+                end if;
+            when others =>
+                next_state <= paso;
+        end case;
+    end process;
+
+    OUTPUT_LOGIC : process (current_state, S_Ha, F_sen, B_sen, Id_iden, Ca_iden, Boton_int, Sal)
+    begin
+        case (current_state) is
+            when Ini =>
+                Sem_Ini <= '0';
+                Tal_Ini <= '0';
+                Sem_Fin <= '0';
+                Tal_Fin <= '0';
+                Alm <= '0';
+                Cont_V <= '0';
+                Cont_T <= '0'; -- Contador de tiempo desactivado
+                Cont_D <= '0';
+            when paso =>
+                Sem_Ini <= '1';
+                Tal_Ini <= '1';
+                Cont_T <= '1'; -- Activar contador de tiempo
+                Cont_V <= '1';
+                Cont_T <= '1';
+            when intento1 =>
+				--| intento2 | intento3 =>
+					Cont_V <= '0';
+					Sem_Ini <= '0';
+					Tal_Ini <= '0';
+					Cont_T <= '1'; -- Mantener contador de tiempo activado
+					Alm <= '0';
+				when intento2 =>
+					Cont_V <= '0';
+					Sem_Ini <= '0';
+					Tal_Ini <= '0';
+					Cont_T <= '1'; -- Mantener contador de tiempo activado
+					Alm <= '0';
+				when intento3 =>
+					Cont_V <= '0';
+					Sem_Ini <= '0';
+					Tal_Ini <= '0';
+					Cont_T <= '1'; -- Mantener contador de tiempo activado
+					Alm <= '1';	
+            when cobro =>
+                Cont_D <= '1';
+                Cont_T <= '1'; -- Mantener contador de tiempo activado
+            when alerta =>
+					Alm <= '1';
+					Cont_T <= '1'; -- Mantener contador de tiempo activado
+            when exito =>
+                Sem_Fin <= '1';
+                Tal_Fin <= '1';
+                Cont_T <= '0'; -- Desactivar contador de tiempo
+            when others =>
+                Sem_Ini <= '0';
+                Tal_Ini <= '0';
+                Sem_Fin <= '0';
+                Tal_Fin <= '0';
+                Alm <= '0';
+                Cont_V <= '0';
+                Cont_T <= '0';
+                Cont_D <= '0';
+        end case;
+    end process;
+end arch_Parcial_2;

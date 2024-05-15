@@ -1,0 +1,11 @@
+
+State Machine - |Parcial_2|current_state
+Name current_state.exito current_state.cobro current_state.alerta current_state.intento3 current_state.intento2 current_state.intento1 current_state.paso current_state.Ini 
+current_state.Ini 0 0 0 0 0 0 0 0 
+current_state.paso 0 0 0 0 0 0 1 1 
+current_state.intento1 0 0 0 0 0 1 0 1 
+current_state.intento2 0 0 0 0 1 0 0 1 
+current_state.intento3 0 0 0 1 0 0 0 1 
+current_state.alerta 0 0 1 0 0 0 0 1 
+current_state.cobro 0 1 0 0 0 0 0 1 
+current_state.exito 1 0 0 0 0 0 0 1 
